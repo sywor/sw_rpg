@@ -1,0 +1,68 @@
+.characterisitc-container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.characteristic-frame {
+    margin-top: 1rem;
+    background-color: #354456;
+    padding: 1% 0.5%;
+    background: 
+    linear-gradient(135deg, transparent 10px, #354456 0) top left, 
+    linear-gradient(225deg, transparent 10px, #354456 0) top right, 
+    linear-gradient(315deg, transparent 10px, #354456 0) bottom right, 
+    linear-gradient(45deg, transparent 10px, #354456 0) bottom left;
+    background-size: calc(50% + 1px) calc(50% + 1px);
+    background-repeat: no-repeat;
+    display: flex;
+    flex: 0 1 10%;
+}
+
+.characteristic-value-box {
+    height: 5.5rem;
+    width: 5.5rem;
+    background-color: white;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.characteristic-value {
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    color: #656263;
+    line-height: 5rem;
+}
+
+.characteristic-title-box {
+    background-color: #8aa8a4;
+    margin: auto;
+    background: 
+    linear-gradient(135deg, transparent 3px, #8aa8a4 0) top left, 
+    linear-gradient(225deg, transparent 3px, #8aa8a4 0) top right, 
+    linear-gradient(315deg, transparent 3px, #8aa8a4 0) bottom right, 
+    linear-gradient(45deg, transparent 3px, #8aa8a4 0) bottom left;
+    background-size: calc(50% + 1px) calc(50% + 1px);
+    background-repeat: no-repeat;
+    min-height: 1.4rem;
+    min-width: 6rem;
+}
+
+.characteristic-title {
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/*354456 dark blue*/
+
+/*d19857 orange*/
+
+/*8aa8a4 light blue*/
+
+/*656263 gray*/

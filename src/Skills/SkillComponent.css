@@ -1,0 +1,47 @@
+.skill-root {
+    margin-top: 2rem;
+}
+
+.characteristics-bg {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    background-color: #d19857;
+    background: 
+    linear-gradient(135deg, transparent 15px, #d19857 0) top left, 
+    linear-gradient(225deg, transparent 15px, #d19857 0) top right, 
+    linear-gradient(315deg, transparent 15px, #d19857 0) bottom right, 
+    linear-gradient(45deg, transparent 15px, #d19857 0) bottom left;
+    background-size: calc(50% + 1px) calc(50% + 1px);
+    background-repeat: no-repeat;
+    height: 9rem;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.characteristics-title-box{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -0.9rem;
+}
+
+.characteristics-title {
+    background-color: #354456;
+    background: 
+    linear-gradient(135deg, transparent 9px, #354456 0) top left, 
+    linear-gradient(225deg, transparent 9px, #354456 0) top right, 
+    linear-gradient(315deg, transparent 9px, #354456 0) bottom right, 
+    linear-gradient(45deg, transparent 9px, #354456 0) bottom left;
+    background-size: calc(50% + 1px) calc(50% + 1px);
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 0rem 5rem;
+    font-size: 1.2rem;
+}
+
+
+
+.characteristics-value-box {
+    justify-content: space-evenly;
+}
