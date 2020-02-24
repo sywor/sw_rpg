@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import SkillComponent from './Skills/SkillComponent';
+import SkillPage from './Skills/SkillPage';
 
 function App() {
   return (
     <div className="container">
       <div class="row">
-        <SkillComponent/>
+        <SkillPage/>
       </div>
     </div>
   );

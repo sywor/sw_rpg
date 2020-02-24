@@ -40,8 +40,10 @@
     font-size: 1.2rem;
 }
 
-
-
 .characteristics-value-box {
     justify-content: space-evenly;
+}
+
+.skill-divider {
+    margin-top: 5rem;
 }
