@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50"
+   height="50"
+   viewBox="0 0 13.229167 13.229167"
+   version="1.1"
+   id="svg219542"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="skill_pool_green_right.svg"
+   inkscape:export-filename="D:\Code\SWCharGUI\SWCharGUI\Assets\skill_pool_green_left.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs219536" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.313709"
+     inkscape:cx="23.013055"
+     inkscape:cy="26.293685"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="1192"
+     inkscape:window-y="1075"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata219539">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer11"
+     inkscape:label="Layer 2">
+    <rect
+       style="fill:#00a500;fill-opacity:1;stroke:none;stroke-width:0.7126202;stroke-opacity:1"
+       id="rect220167"
+       width="11.626225"
+       height="18.897194"
+       x="9.2074146"
+       y="-8.3683414"
+       transform="rotate(35.100026)" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-283.77083)">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#666666;stroke-width:0.52828568;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect220114"
+       width="9.1228352"
+       height="12.698671"
+       x="2.0531657"
+       y="284.03342"
+       inkscape:export-filename="D:\Code\SWCharGUI\SWCharGUI\Assets\skill_pool_green_right.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect220184"
+       width="12.614955"
+       height="19.772879"
+       x="-10.82715"
+       y="279.36563" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect220184-3"
+       width="12.614955"
+       height="19.772879"
+       x="271.15503"
+       y="-16.926245"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect220184-3-4"
+       width="12.614955"
+       height="19.772879"
+       x="297.00092"
+       y="-17.273813"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       id="rect220184-1"
+       width="12.614955"
+       height="19.772879"
+       x="11.440264"
+       y="280.92419" />
+    <rect
+       style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.13324241;stroke-opacity:1"
+       id="rect220134-3-3-8-6"
+       width="0.49006528"
+       height="5.8578444"
+       x="174.30855"
+       y="233.36818"
+       transform="matrix(0.8098627,0.58661948,-0.58260274,0.81275706,0,0)" />
+    <rect
+       style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.13324241;stroke-opacity:1"
+       id="rect220134-3-3-8"
+       width="0.49006528"
+       height="5.8578444"
+       x="174.30321"
+       y="223.34134"
+       transform="matrix(0.8098627,0.58661948,-0.58260274,0.81275706,0,0)" />
+  </g>
+</svg>

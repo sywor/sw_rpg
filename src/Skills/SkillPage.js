@@ -25,73 +25,71 @@ class SkillPage extends React.Component {
         <div className="skill-divider">
           <Divider title="Skills" />
         </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-5">              
-              <div className="container">
-                <div className="row">
-                  <div className="col-7">GENERAL SKILLS</div>
-                  <div className="col-2">CHARS</div>
-                  <div className="col-3">POOL</div>
-                </div>
-                <Skill name="Astrogation"/>
-                <Skill name="Athletics"/>
-                <Skill name="Charm"/>
-                <Skill name="Coercion"/>
-                <Skill name="Computers"/>
-                <Skill name="Cool"/>
-                <Skill name="Coordination"/>
-                <Skill name="Deception"/>
-                <Skill name="Discipline"/>
-                <Skill name="Leadership"/>
-                <Skill name="Mechanics"/>
-                <Skill name="Medicine"/>
-                <Skill name="Negotiation"/>
-                <Skill name="Perception"/>
-                <Skill name="Piloting - Planetery"/>
-                <Skill name="Piloting - Space"/>
-                <Skill name="Resilience"/>
-                <Skill name="Skullduggery"/>   
-                <Skill name="Stealth"/>
-              </div>
-            </div>
-            <div className="col-2"/>
-            <div className="col-5">
-              <div className="container">
-              <div className="row">
-                  <div className="col-7">GENERAL SKILLS</div>
-                  <div className="col-2">CHARS</div>
-                  <div className="col-3">POOL</div>
-                </div>                
-                <Skill name="Streetwise"/>
-                <Skill name="Survival"/>
-                <Skill name="Vigilance"/>
-                <div className="row">
-                  <div className="col-7">KNOWLEDGE SKILLS</div>
-                  <div className="col-2">CHARS</div>
-                  <div className="col-3">POOL</div>
-                </div>     
-                <Skill name="Core Worlds"/>
-                <Skill name="Education"/>
-                <Skill name="Lore"/>
-                <Skill name="Outer Rim"/>
-                <Skill name="Underworld"/>
-                <Skill name="Warfare"/>
-                <Skill name="Xenology"/>
-                <div className="row">
-                  <div className="col-7">COMBAT SKILLS</div>
-                  <div className="col-2">CHARS</div>
-                  <div className="col-3">POOL</div>
-                </div>  
-                <Skill name="Brawl"/>
-                <Skill name="Gunnery"/>
-                <Skill name="Lightsaber"/>
-                <Skill name="Melee"/>
-                <Skill name="Ranged - Heavy"/>
-                <Skill name="Ranged - Light"/>
-              </div>
-            </div>
-          </div>
+        <div className="skill-tables-box">          
+            <table className="skill-table">
+              <tr className="skill-head-title-row">
+                <th />
+                <th className="skill-head-title-name">GENERAL SKILLS</th>
+                <th className="skill-head-title-char">CHARS</th>
+                <th className="skill-head-title-pool">POOL</th>
+              </tr>
+              <Skill name="Astrogation" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Athletics" char="BR" career={false} pool={[0, 0, 3, 0, 0]} />
+              <Skill name="Charm" char="PR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Coercion" char="WIL" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Computers" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Cool" char="PR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Coordination" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Deception" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Discipline" char="WIL" career={false} pool={[0, 0, 0, 0, 2]} />
+              <Skill name="Leadership" char="PR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Mechanics" char="INT" career={false} pool={[0, 0, 0, 1, 0]} />
+              <Skill name="Medicine" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Negotiation" char="PR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Perception" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Piloting - Planetery" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Piloting - Space" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Resilience" char="BR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Skullduggery" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Stealth" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
+            </table>
+            <div className="skill-tables-spacer"/>
+            <table className="skill-table">
+              <tr className="skill-head-title-row">
+                <th/>
+                <th className="skill-head-title-name">GENERAL SKILLS</th>
+                <th className="skill-head-title-char">CHARS</th>
+                <th className="skill-head-title-pool">POOL</th>
+              </tr>
+              <Skill name="Streetwise" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Survival" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Vigilance" char="WIL" career={false} pool={[0, 0, 0, 0, 0]} />
+              <tr className="skill-head-title-row">
+                <th/>
+                <th className="skill-head-title-name">KNOWLEDGE SKILLS</th>
+                <th className="skill-head-title-char">CHARS</th>
+                <th className="skill-head-title-pool">POOL</th>
+              </tr>
+              <Skill name="Core Worlds" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Education" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Lore" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Outer Rim" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Underworld" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Warfare" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Xenology" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <tr className="skill-head-title-row">
+                <th/>
+                <th className="skill-head-title-name">COMBAT SKILLS</th>
+                <th className="skill-head-title-char">CHARS</th>
+                <th className="skill-head-title-pool">POOL</th>
+              </tr>
+              <Skill name="Brawl" char="BR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Gunnery" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Lightsaber" char="BR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Melee" char="BR" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Ranged - Heavy" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Ranged - Light" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
+            </table>  
         </div>
       </div>
     );

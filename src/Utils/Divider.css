@@ -6,8 +6,8 @@
 .divider-title {
     text-align: left;
     color: #656263;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-family: "refrigeratordeluxeregular";
 }
 
 .divider-separator-box {
@@ -19,8 +19,8 @@
 
 .divider-separator-title {
     color: #d19857;
-    font-size: 1.3rem;
-    font-family: "aurebeshregular";
+    font-size: 1.9rem;
+    font-family: "aurebeshmedium";
 }
 
 .divider-separator-line {    

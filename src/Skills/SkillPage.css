@@ -47,3 +47,48 @@
 .skill-divider {
     margin-top: 5rem;
 }
+
+.skill-tables-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: space-between;
+}
+
+.skill-table {
+    width: 100%;
+}
+
+.skill-head-title-row {
+    margin: 2rem 0rem;
+}
+
+.skill-head-title-name {
+    font-family: "refrigeratordeluxeregular";
+    color: #656263;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.85rem 0rem;
+}
+
+.skill-head-title-char {
+    font-family: "refrigeratordeluxeregular";
+    color: #656263;
+    font-weight: bold;
+    width: 5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.skill-head-title-pool {
+    font-family: "refrigeratordeluxeregular";
+    color: #656263;
+    font-weight: bold;
+    width: 8rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.skill-tables-spacer {
+    width: 4rem;
+}

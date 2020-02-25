@@ -1,0 +1,24 @@
+.career-skill {
+    max-height: 25px;
+}
+
+.skill-title {
+    font-family: "refrigeratordeluxeregular";
+    color: #656263;
+    font-size: 1.7rem;
+}
+
+.skill-char {
+    font-family: "refrigeratordeluxeregular";
+    color: #656263;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.pool-box {
+
+}
+
+.pool-icon {
+    max-height: 25px;
+}
