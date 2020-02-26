@@ -34,7 +34,7 @@ class SkillPage extends React.Component {
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
               </tr>
-              <Skill name="Astrogation" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Astrogation" char="INT" career={true} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Athletics" char="BR" career={false} pool={[0, 0, 3, 0, 0]} />
               <Skill name="Charm" char="PR" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Coercion" char="WIL" career={false} pool={[0, 0, 0, 0, 0]} />

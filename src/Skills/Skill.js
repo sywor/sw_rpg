@@ -10,7 +10,7 @@ const skill_pool_yellow = "./img/skill_pool_yellow.svg";
 
 class Skill extends React.Component {
   render() {
-    const career_skill = career_unchecked;
+    var career_skill = career_unchecked;
 
     if (this.props.career) {
       career_skill = career_checked;
