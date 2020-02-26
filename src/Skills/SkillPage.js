@@ -25,8 +25,9 @@ class SkillPage extends React.Component {
         <div className="skill-divider">
           <Divider title="Skills" />
         </div>
-        <div className="skill-tables-box">          
-            <table className="skill-table">
+        <div className="skill-tables-box">
+          <table className="skill-table">
+            <tbody>
               <tr className="skill-head-title-row">
                 <th />
                 <th className="skill-head-title-name">GENERAL SKILLS</th>
@@ -37,7 +38,7 @@ class SkillPage extends React.Component {
               <Skill name="Athletics" char="BR" career={false} pool={[0, 0, 3, 0, 0]} />
               <Skill name="Charm" char="PR" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Coercion" char="WIL" career={false} pool={[0, 0, 0, 0, 0]} />
-              <Skill name="Computers" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
+              <Skill name="Computers" char="INT" career={false} pool={[0, 3, 0, 0, 0]} />
               <Skill name="Cool" char="PR" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Coordination" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Deception" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
@@ -52,11 +53,13 @@ class SkillPage extends React.Component {
               <Skill name="Resilience" char="BR" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Skullduggery" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Stealth" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
-            </table>
-            <div className="skill-tables-spacer"/>
-            <table className="skill-table">
+            </tbody>
+          </table>
+          <div className="skill-tables-spacer" />
+          <table className="skill-table">
+            <tbody>
               <tr className="skill-head-title-row">
-                <th/>
+                <th />
                 <th className="skill-head-title-name">GENERAL SKILLS</th>
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
@@ -65,7 +68,7 @@ class SkillPage extends React.Component {
               <Skill name="Survival" char="CUN" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Vigilance" char="WIL" career={false} pool={[0, 0, 0, 0, 0]} />
               <tr className="skill-head-title-row">
-                <th/>
+                <th />
                 <th className="skill-head-title-name">KNOWLEDGE SKILLS</th>
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
@@ -78,7 +81,7 @@ class SkillPage extends React.Component {
               <Skill name="Warfare" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Xenology" char="INT" career={false} pool={[0, 0, 0, 0, 0]} />
               <tr className="skill-head-title-row">
-                <th/>
+                <th />
                 <th className="skill-head-title-name">COMBAT SKILLS</th>
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
@@ -89,7 +92,11 @@ class SkillPage extends React.Component {
               <Skill name="Melee" char="BR" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Ranged - Heavy" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
               <Skill name="Ranged - Light" char="AG" career={false} pool={[0, 0, 0, 0, 0]} />
-            </table>  
+            </tbody>
+          </table>
+        </div>
+        <div className="skill-divider">
+          <Divider title="Abilities" />
         </div>
       </div>
     );

@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="50"
+   width="37"
    height="50"
-   viewBox="0 0 13.229167 13.229167"
+   viewBox="0 0 9.7895876 13.229167"
    version="1.1"
    id="svg219542"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="skill_pool_green_left.svg"
    inkscape:export-filename="D:\Code\SWCharGUI\SWCharGUI\Assets\skill_pool_green_left.png"
    inkscape:export-xdpi="50"
@@ -28,20 +28,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="28.434719"
-     inkscape:cy="20.676701"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:zoom="11.313709"
+     inkscape:cx="-4.7299246"
+     inkscape:cy="48.440899"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer11"
      showgrid="false"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1137"
-     inkscape:window-x="1192"
-     inkscape:window-y="1075"
+     inkscape:window-width="3200"
+     inkscape:window-height="1721"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true"
+     inkscape:pagecheckerboard="true" />
   <metadata
      id="metadata219539">
     <rdf:RDF>
@@ -50,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,14 +59,11 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Layer 2">
-    <rect
-       style="fill:#00a500;fill-opacity:1;stroke:none;stroke-width:0.7126202;stroke-opacity:1"
+    <path
+       style="fill:#00a500;fill-opacity:1;stroke:none;stroke-width:0.71768355;stroke-opacity:1"
+       d="M 9.5980027,-0.00206706 6.0899432e-5,0.00775147 0.00110962,13.23072 0.1667359,13.22862 Z"
        id="rect220167"
-       width="11.626225"
-       height="18.897194"
-       x="-2.4221916"
-       y="-7.956327"
-       transform="rotate(35.100026)" />
+       inkscape:connector-curvature="0" />
   </g>
   <g
      inkscape:label="Layer 1"
@@ -73,60 +71,30 @@
      id="layer1"
      transform="translate(0,-283.77083)">
     <rect
-       style="fill:none;fill-opacity:1;stroke:#666666;stroke-width:0.52828568;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#666666;stroke-width:0.53203923;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect220114"
-       width="9.1228352"
+       width="9.2529345"
        height="12.698671"
-       x="2.0531657"
+       x="0.26900291"
        y="284.03342"
        inkscape:export-filename="D:\Code\SWCharGUI\SWCharGUI\Assets\skill_pool_green_left.png"
        inkscape:export-xdpi="100"
        inkscape:export-ydpi="100" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect220184"
-       width="12.614955"
-       height="19.772879"
-       x="-10.82715"
-       y="279.36563" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect220184-3"
-       width="12.614955"
-       height="19.772879"
-       x="271.15503"
-       y="-16.926245"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect220184-3-4"
-       width="12.614955"
-       height="19.772879"
-       x="297.00092"
-       y="-17.273813"
-       transform="rotate(90)" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect220184-1"
-       width="12.614955"
-       height="19.772879"
-       x="11.440264"
-       y="280.92419" />
-    <rect
-       style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.13324241;stroke-opacity:1"
+       style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.13419071;stroke-opacity:1"
        id="rect220134-3-3-8-6"
-       width="0.49006528"
-       height="5.8578444"
-       x="174.30855"
-       y="233.36818"
-       transform="matrix(0.8098627,0.58661948,-0.58260274,0.81275706,0,0)" />
+       width="0.49466017"
+       height="5.886332"
+       x="174.47591"
+       y="235.55717"
+       transform="matrix(0.81378194,0.58117033,-0.58805138,0.80882357,0,0)" />
     <rect
-       style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.13324241;stroke-opacity:1"
+       style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.13419071;stroke-opacity:1"
        id="rect220134-3-3-8"
-       width="0.49006528"
-       height="5.8578444"
-       x="174.30321"
-       y="223.34134"
-       transform="matrix(0.8098627,0.58661948,-0.58260274,0.81275706,0,0)" />
+       width="0.49466017"
+       height="5.886332"
+       x="174.4705"
+       y="225.48158"
+       transform="matrix(0.81378194,0.58117033,-0.58805138,0.80882357,0,0)" />
   </g>
 </svg>

@@ -4,9 +4,12 @@ import SkillPage from './Skills/SkillPage';
 
 function App() {
   return (
-    <div className="container">
-      <div class="row">
-        <SkillPage/>
+    <div className="background">
+      <div className="page-root-menu">
+
+      </div>
+      <div className="page-background">
+        <SkillPage />
       </div>
     </div>
   );
