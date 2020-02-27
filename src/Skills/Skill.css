@@ -6,6 +6,9 @@
     font-family: "refrigeratordeluxeregular";
     color: #656263;
     font-size: 1.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 15rem;
 }
 
 .skill-char {

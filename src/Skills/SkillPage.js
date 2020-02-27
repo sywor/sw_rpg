@@ -40,7 +40,7 @@ class SkillPage extends React.Component {
           <table className="skill-table">
             <tbody>
               <tr className="skill-head-title-row">
-                <th />
+                <th className="skill-head-title-career" />
                 <th className="skill-head-title-name">GENERAL SKILLS</th>
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
@@ -70,7 +70,7 @@ class SkillPage extends React.Component {
           <table className="skill-table">
             <tbody>
               <tr className="skill-head-title-row">
-                <th />
+                <th className="skill-head-title-career" />
                 <th className="skill-head-title-name">GENERAL SKILLS</th>
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
@@ -79,7 +79,7 @@ class SkillPage extends React.Component {
               <Skill name="Survival" char="CUN" model={model.skills.survival} />
               <Skill name="Vigilance" char="WIL" model={model.skills.vigilance} />
               <tr className="skill-head-title-row">
-                <th />
+                <th className="skill-head-title-career" />
                 <th className="skill-head-title-name">KNOWLEDGE SKILLS</th>
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
@@ -92,7 +92,7 @@ class SkillPage extends React.Component {
               <Skill name="Warfare" char="INT" model={model.skills.warfare} />
               <Skill name="Xenology" char="INT" model={model.skills.xenology} />
               <tr className="skill-head-title-row">
-                <th />
+                <th className="skill-head-title-career" />
                 <th className="skill-head-title-name">COMBAT SKILLS</th>
                 <th className="skill-head-title-char">CHARS</th>
                 <th className="skill-head-title-pool">POOL</th>
@@ -126,7 +126,7 @@ class SkillPage extends React.Component {
         <div className="spinner-position-box">
           <div className="spinner-border spinner-size" role="status">
             <span className="sr-only">Loading...</span>
-        </div>
+          </div>
         </div>
       </div>;
   }

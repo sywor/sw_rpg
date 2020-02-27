@@ -7,6 +7,7 @@ const skill_pool_empty = "/img/skill_pool_empty.svg";
 const skill_pool_green_left = "/img/skill_pool_green_left.svg";
 const skill_pool_green_right = "/img/skill_pool_green_right.svg";
 const skill_pool_yellow = "/img/skill_pool_yellow.svg";
+const dots = " ..........................................................";
 
 class Skill extends React.Component {
   render() {
@@ -24,7 +25,7 @@ class Skill extends React.Component {
           <img src={career_skill} className="career-skill" />
         </td>
         <td>
-          <div className="skill-title">{this.props.name}</div>
+          <div className="skill-title">{this.props.name + dots}</div>
         </td>
         <td>
           <div className="skill-char">{this.props.char}</div>

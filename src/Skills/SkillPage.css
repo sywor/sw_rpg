@@ -64,6 +64,10 @@
     margin: 2rem 0rem;
 }
 
+.skill-head-title-career {
+    width: 3rem;
+}
+
 .skill-head-title-name {
     font-family: "refrigeratordeluxeregular";
     color: #656263;
