@@ -2,21 +2,6 @@
     margin-top: 2rem;
 }
 
-.spinner-position-box {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.spinner-size {
-    width: 5rem;
-    height: 5rem;
-    border-width: 1rem;
-    margin-top: 10rem;
-}
-
 .characteristics-bg {
     display: flex;
     align-content: flex-start;
@@ -36,7 +21,7 @@
 
 .characteristics-title-box{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
     margin-top: -1.1rem;
 }
 

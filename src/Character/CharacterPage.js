@@ -12,12 +12,28 @@ class CharacterPage extends React.Component {
       this.state = {};
     }
 
+    renderBody(model)
+    {
+      return model && (
+      <div className="container">
+        </div>)
+    }
+
+    componentDidMount() {
+      fetch("/models/character_model.json")
+        .then(respponse => respponse.json())
+        .then(json => this.setState({ characterModel: json }));
+    }
+
     render(){
-        return (
-            <div>
-                CHARACTER PAGE!!
-            </div>
-        )
+      return this.renderBody(this.state.characterModel) ||
+      <div className="container skill-root">
+        <div className="spinner-position-box">
+          <div className="spinner-border spinner-size" role="status">
+            <span className="sr-only">Loading...</span>
+        </div>
+        </div>
+      </div>;
     }
 }
 
