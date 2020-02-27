@@ -16,6 +16,14 @@ class CharacterPage extends React.Component {
     {
       return model && (
       <div className="container">
+        <div className="row">
+          <div className="col">
+            <img src="/img/zoma.png" className="avatar-box"/>
+          </div>
+          <div className="col">
+            
+          </div> 
+        </div>
         </div>)
     }
 
