@@ -1,12 +1,12 @@
 import React from 'react';
 import './Skill.css';
 
-const career_checked = "./img/career_checked.svg";
-const career_unchecked = "./img/career_unchecked.svg";
-const skill_pool_empty = "./img/skill_pool_empty.svg";
-const skill_pool_green_left = "./img/skill_pool_green_left.svg";
-const skill_pool_green_right = "./img/skill_pool_green_right.svg";
-const skill_pool_yellow = "./img/skill_pool_yellow.svg";
+const career_checked = "/img/career_checked.svg";
+const career_unchecked = "/img/career_unchecked.svg";
+const skill_pool_empty = "/img/skill_pool_empty.svg";
+const skill_pool_green_left = "/img/skill_pool_green_left.svg";
+const skill_pool_green_right = "/img/skill_pool_green_right.svg";
+const skill_pool_yellow = "/img/skill_pool_yellow.svg";
 
 class Skill extends React.Component {
   render() {

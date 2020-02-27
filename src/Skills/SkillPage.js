@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  withRouter
+} from "react-router-dom";
+
 import './SkillPage.css'
 
 import Characteristic from './Characteristic';
@@ -128,4 +132,4 @@ class SkillPage extends React.Component {
   }
 }
 
-export default SkillPage;
+export default withRouter(SkillPage);

@@ -1,10 +1,15 @@
 import React from 'react';
-import './Menu.css'
+import {
+    withRouter
+} from "react-router-dom";
+
+
+import './PlayingMenu.css'
 
 const buttonActive = "menu-button-content-selected";
 const buttonInactive = "menu-button-content";
 
-class Menu extends React.Component {
+class PlayingMenu extends React.Component {
 
     constructor(props) {
         super(props);
@@ -20,7 +25,7 @@ class Menu extends React.Component {
                 <div className="menu-box-center">
                     <div onClick={() => {
                         this.setState({ activeButton: 0 });
-                        this.props.activePageCallback(0);
+                        this.props.history.push("/playing/character");
                     }} className="menu-button">
                         <div className={this.state.activeButton === 0 ? buttonActive : buttonInactive}>
                             Character
@@ -28,7 +33,7 @@ class Menu extends React.Component {
                     </div>
                     <div onClick={() => {
                         this.setState({ activeButton: 1 });
-                        this.props.activePageCallback(1);
+                        this.props.history.push("/playing/skills");
                     }} className="menu-button">
                         <div className={this.state.activeButton === 1 ? buttonActive : buttonInactive}>
                             Skills
@@ -36,7 +41,7 @@ class Menu extends React.Component {
                     </div>
                     <div onClick={() => {
                         this.setState({ activeButton: 2 });
-                        this.props.activePageCallback(2);
+                        this.props.history.push("/playing/combat");
                     }} className="menu-button">
                         <div className={this.state.activeButton === 2 ? buttonActive : buttonInactive}>
                             Combat
@@ -44,7 +49,7 @@ class Menu extends React.Component {
                     </div>
                     <div onClick={() => {
                         this.setState({ activeButton: 3 });
-                        this.props.activePageCallback(3);
+                        this.props.history.push("/playing/inventory");
                     }} className="menu-button">
                         <div className={this.state.activeButton === 3 ? buttonActive : buttonInactive}>
                             Inventory
@@ -52,7 +57,7 @@ class Menu extends React.Component {
                     </div>
                     <div onClick={() => {
                         this.setState({ activeButton: 4 });
-                        this.props.activePageCallback(4);
+                        this.props.history.push("/playing/notes");
                     }} className="menu-button">
                         <div className={this.state.activeButton === 4 ? buttonActive : buttonInactive}>
                             Notes
@@ -60,10 +65,18 @@ class Menu extends React.Component {
                     </div>
                     <div onClick={() => {
                         this.setState({ activeButton: 5 });
-                        this.props.activePageCallback(5);
+                        this.props.history.push("/playing/talent_trees");
                     }} className="menu-button">
                         <div className={this.state.activeButton === 5 ? buttonActive : buttonInactive}>
                             Talent Trees
+                        </div>
+                    </div>
+                    <div onClick={() => {
+                        this.setState({ activeButton: 6 });
+                        this.props.history.push("/playing/ship");
+                    }} className="menu-button">
+                        <div className={this.state.activeButton === 6 ? buttonActive : buttonInactive}>
+                            Ship
                         </div>
                     </div>
                 </div>
@@ -75,4 +88,4 @@ class Menu extends React.Component {
     }
 }
 
-export default Menu;
+export default withRouter(PlayingMenu);
