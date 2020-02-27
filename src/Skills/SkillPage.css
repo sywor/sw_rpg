@@ -2,6 +2,21 @@
     margin-top: 2rem;
 }
 
+.spinner-position-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.spinner-size {
+    width: 5rem;
+    height: 5rem;
+    border-width: 1rem;
+    margin-top: 10rem;
+}
+
 .characteristics-bg {
     display: flex;
     align-content: flex-start;
@@ -22,22 +37,23 @@
 .characteristics-title-box{
     display: flex;
     justify-content: space-evenly;
-    margin-top: -0.9rem;
+    margin-top: -1.1rem;
 }
 
 .characteristics-title {
     background-color: #354456;
     background: 
-    linear-gradient(135deg, transparent 9px, #354456 0) top left, 
-    linear-gradient(225deg, transparent 9px, #354456 0) top right, 
-    linear-gradient(315deg, transparent 9px, #354456 0) bottom right, 
-    linear-gradient(45deg, transparent 9px, #354456 0) bottom left;
+    linear-gradient(135deg, transparent 12px, #354456 0) top left, 
+    linear-gradient(225deg, transparent 12px, #354456 0) top right, 
+    linear-gradient(315deg, transparent 12px, #354456 0) bottom right, 
+    linear-gradient(45deg, transparent 12px, #354456 0) bottom left;
     background-size: calc(50% + 1px) calc(50% + 1px);
     background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 0rem 5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-family: "refrigeratordeluxeregular";
 }
 
 .characteristics-value-box {

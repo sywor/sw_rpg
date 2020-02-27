@@ -22,7 +22,7 @@ class Menu extends React.Component {
                         this.setState({ activeButton: 0 });
                         this.props.activePageCallback(0);
                     }} className="menu-button">
-                        <div className={this.state.activeButton == 0 ? buttonActive : buttonInactive}>
+                        <div className={this.state.activeButton === 0 ? buttonActive : buttonInactive}>
                             Character
                         </div>
                     </div>
@@ -30,7 +30,7 @@ class Menu extends React.Component {
                         this.setState({ activeButton: 1 });
                         this.props.activePageCallback(1);
                     }} className="menu-button">
-                        <div className={this.state.activeButton == 1 ? buttonActive : buttonInactive}>
+                        <div className={this.state.activeButton === 1 ? buttonActive : buttonInactive}>
                             Skills
                         </div>
                     </div>
@@ -38,7 +38,7 @@ class Menu extends React.Component {
                         this.setState({ activeButton: 2 });
                         this.props.activePageCallback(2);
                     }} className="menu-button">
-                        <div className={this.state.activeButton == 2 ? buttonActive : buttonInactive}>
+                        <div className={this.state.activeButton === 2 ? buttonActive : buttonInactive}>
                             Combat
                         </div>
                     </div>
@@ -46,7 +46,7 @@ class Menu extends React.Component {
                         this.setState({ activeButton: 3 });
                         this.props.activePageCallback(3);
                     }} className="menu-button">
-                        <div className={this.state.activeButton == 3 ? buttonActive : buttonInactive}>
+                        <div className={this.state.activeButton === 3 ? buttonActive : buttonInactive}>
                             Inventory
                         </div>
                     </div>
@@ -54,7 +54,7 @@ class Menu extends React.Component {
                         this.setState({ activeButton: 4 });
                         this.props.activePageCallback(4);
                     }} className="menu-button">
-                        <div className={this.state.activeButton == 4 ? buttonActive : buttonInactive}>
+                        <div className={this.state.activeButton === 4 ? buttonActive : buttonInactive}>
                             Notes
                         </div>
                     </div>
@@ -62,7 +62,7 @@ class Menu extends React.Component {
                         this.setState({ activeButton: 5 });
                         this.props.activePageCallback(5);
                     }} className="menu-button">
-                        <div className={this.state.activeButton == 5 ? buttonActive : buttonInactive}>
+                        <div className={this.state.activeButton === 5 ? buttonActive : buttonInactive}>
                             Talent Trees
                         </div>
                     </div>

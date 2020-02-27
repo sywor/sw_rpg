@@ -12,7 +12,7 @@ class Skill extends React.Component {
   render() {
     var career_skill = career_unchecked;
 
-    if (this.props.career) {
+    if (this.props.model.career) {
       career_skill = career_checked;
     }
 
@@ -31,7 +31,7 @@ class Skill extends React.Component {
         </td>
         <td>
           <div>
-            {this.props.pool.map((n) => {
+            {this.props.model.pool.map((n) => {
               key_counter++;
               return this.renderPoolIcon(n, key_counter)
             })}
