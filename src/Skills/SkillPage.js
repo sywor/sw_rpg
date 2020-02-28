@@ -34,7 +34,7 @@ class SkillPage extends React.Component {
           </div>
         </div>
         <div className="skill-divider">
-          <Divider title="Skills" />
+          <Divider title="SKILLS" />
         </div>
         <div className="skill-tables-box">
           <table className="skill-table">
@@ -107,7 +107,7 @@ class SkillPage extends React.Component {
           </table>
         </div>
         <div className="skill-divider">
-          <Divider title="Abilities" />
+          <Divider title="ABILITIES" />
         </div>
       </div>
     )
@@ -117,6 +117,7 @@ class SkillPage extends React.Component {
     fetch("/models/skill_model.json")
       .then(respponse => respponse.json())
       .then(json => this.setState({ skillModel: json }));
+      console.log("Skill page mounted");
   }
 
   render() {

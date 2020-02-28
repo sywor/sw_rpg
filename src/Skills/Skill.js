@@ -31,12 +31,10 @@ class Skill extends React.Component {
           <div className="skill-char">{this.props.char}</div>
         </td>
         <td>
-          <div>
-            {this.props.model.pool.map((n) => {
-              key_counter++;
-              return this.renderPoolIcon(n, key_counter)
-            })}
-          </div>
+          {this.props.model.pool.map((n) => {
+            key_counter++;
+            return this.renderPoolIcon(n, key_counter)
+          })}
         </td>
       </tr>
     );

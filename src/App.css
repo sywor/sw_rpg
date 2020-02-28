@@ -17,10 +17,12 @@
 
 .page-background {
   width: 1080px;
-  min-height: 1880px;
+  min-height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.8);
   margin: auto;
-  flex-grow: 1;
 }
 
 .spinner-position-box {
