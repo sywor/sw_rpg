@@ -5,7 +5,7 @@ import './CombatComponent.css';
 const empty_square = "/img/empty_square.svg";
 const red_square = "/img/red_square.svg";
 
-class WeaponComponent extends React.Component {
+class ArmorComponent extends React.Component {
 
     constructor(prop) {
         super(prop);
@@ -21,42 +21,34 @@ class WeaponComponent extends React.Component {
                 <div className="weapon-row">
                     <div className="weapon-desc-box">
                         <div className="weapon-desc-title">NAME:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.name}</div>
+                        <div className="weapon-desc-content">{this.props.armor.name}</div>
                     </div>
                     <div className="weapon-desc-box margin-left-auto">
-                        <div className="weapon-desc-title">SKILL:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.skill}</div>
+                        <div className="weapon-desc-title">DEFENCE:</div>
+                        <div className="weapon-desc-content">{this.props.armor.skill}</div>
                     </div>
                     <div className="weapon-desc-box margin-left">
-                        <div className="weapon-desc-title">RANGE:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.range}</div>
-                    </div>
-                    <div className="weapon-desc-box margin-left">
-                        <div className="weapon-desc-title">DMG:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.damage}</div>
-                    </div>
-                    <div className="weapon-desc-box margin-left">
-                        <div className="weapon-desc-title">CRIT:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.critical}</div>
+                        <div className="weapon-desc-title">SOAK:</div>
+                        <div className="weapon-desc-content">{this.props.armor.range}</div>
                     </div>
                     <div className="weapon-desc-box margin-left">
                         <div className="weapon-desc-title">ENC:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.encumbrance}</div>
+                        <div className="weapon-desc-content">{this.props.armor.encumbrance}</div>
                     </div>
                     <div className="weapon-desc-box margin-left">
                         <div className="weapon-desc-title">HP:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.hard_points}</div>
+                        <div className="weapon-desc-content">{this.props.armor.hard_points}</div>
                     </div>
                 </div>
                 <div className="weapon-row">
                     <div className="weapon-desc-box">
                         <div className="weapon-desc-title">SPECIAL:</div>
-                        <div className="weapon-desc-content">{this.props.weapon.special}</div>
+                        <div className="weapon-desc-content">{this.props.armor.special}</div>
                     </div>
                     <div className="weapon-desc-box margin-left-auto">
                         <div className="weapon-desc-title">CONDITION</div>
                         <div className="weapon-desc-content">
-                            {this.props.weapon.condition.map((n) => {
+                            {this.props.armor.condition.map((n) => {
                                 key_counter++;
                                 return this.renderConditionIcon(n, key_counter)
                             })}</div>
@@ -77,4 +69,4 @@ class WeaponComponent extends React.Component {
     }
 }
 
-export default WeaponComponent;
+export default ArmorComponent;

@@ -7,6 +7,7 @@ import './CombatPage.css';
 
 import Divider from '../Common/Divider';
 import Weapon from '../Common/WeaponComponent';
+import Armor from '../Common/ArmorComponent';
 
 class CombatPage extends React.Component {
 
@@ -15,7 +16,7 @@ class CombatPage extends React.Component {
     this.state = {};
   }
 
-  renderBody(combat, base) {
+  renderBody(combat, weapons, armors) {
 
     var key_counter = 0;
     return (
@@ -23,7 +24,7 @@ class CombatPage extends React.Component {
         <Divider title="WEAPONS" />
         {
           combat.weapons.map((weapon) => {
-            var weapon_base = base[weapon.weapon_key];
+            var weapon_base = weapons[weapon.weapon_key];
 
             for (var key of Object.keys(weapon.modification)) {
               if (weapon_base.hasOwnProperty(key)) {
@@ -42,31 +43,55 @@ class CombatPage extends React.Component {
             return (<Weapon weapon={weapon_base} key={key_counter} />);
           })}
           <Divider title="ARMOR" />
+          {
+              (() => {
+
+                var armor_base = armors[combat.armor.armor_key];
+
+                for (var key of Object.keys(combat.armor.modification)) {
+                if (armor_base.hasOwnProperty(key)) {
+                  if (typeof armor_base[key] === 'string') {
+                    armor_base[key] += " " + combat.armor.modification[key];
+                  }
+                  else {
+                    armor_base[key] += combat.armor.modification[key];
+                  }
+                }
+              }
+
+              armor_base["condition"] = combat.armor["condition"];
+              return (<Armor armor={armor_base} />);
+            })()
+          }
           <Divider title="STATS" />
       </div>
     );
   }
 
   async componentDidMount() {
-    let [combat_model, weapon_models] = await Promise.all([
+    let [combat_model, weapon_models, armor_models] = await Promise.all([
       fetch("/models/combat_model.json"),
-      fetch("/models/weapon_models.json")
+      fetch("/models/weapon_models.json"),
+      fetch("/models/armor_models.json")
     ]);
 
     let combat = await combat_model.json();
-    let base = await weapon_models.json();
+    let weapons = await weapon_models.json();
+    let armors = await armor_models.json();
 
     this.setState({ combat_model: combat });
-    this.setState({ base_weapons: base });
+    this.setState({ base_weapons: weapons });
+    this.setState({ base_armors: armors });
   }
 
   render() {
 
     var combat = this.state.combat_model;
-    var base = this.state.base_weapons;
+    var weapons = this.state.base_weapons;
+    var armors = this.state.base_armors;
 
-    if (combat && base) {
-      return this.renderBody(combat, base);
+    if (combat && weapons && armors) {
+      return this.renderBody(combat, weapons, armors);
     }
     else {
       return (
