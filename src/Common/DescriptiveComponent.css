@@ -1,0 +1,17 @@
+.descriptive-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: "refrigeratordeluxeregular";
+    font-size: 1.2rem;
+}
+
+.descriptive-title {
+    color: #656263;
+    margin-right: 0.5rem;
+}
+
+.descriptive-content {
+    overflow: hidden;
+    white-space: nowrap;
+}

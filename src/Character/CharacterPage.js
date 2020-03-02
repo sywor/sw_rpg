@@ -5,7 +5,8 @@ import {
 
 import './CharacterPage.css';
 
-import Divider from '../Utils/Divider';
+import Divider from '../Common/Divider';
+import Descriptor from '../Common/DescriptiveComponent';
 
 const dots = " ..................................................................................................................................................................";
 
@@ -14,15 +15,6 @@ class CharacterPage extends React.Component {
   constructor(prop) {
     super(prop);
     this.state = {};
-  }
-
-  renderDescContent(title, content) {
-    return (
-      <div className="character-description-box character-font">
-        <div className="character-description-title">{title}</div>
-        <div className="character-description-content">{content + dots}</div>
-      </div>
-    )
   }
 
   renderObligationContent(content, key) {
@@ -49,35 +41,35 @@ class CharacterPage extends React.Component {
         </div>
         <div className="description-box">
           <Divider title="DESCRIPTION" />
-          {this.renderDescContent("NAME", model.description.name)}
-          {this.renderDescContent("SPECIES", model.description.species)}
-          {this.renderDescContent("CAREER", model.description.career)}
+          <Descriptor title={"NAME"} content={model.description.name}/>
+          <Descriptor title={"SPECIES"} content={model.description.species}/>
+          <Descriptor title={"CAREER"} content={model.description.career}/>
           <div className="description-box-row">
             <div className="description-box-col right-padding">
-              {this.renderDescContent("GENDER", model.description.gender)}
-              {this.renderDescContent("HEIGHT", model.description.height)}
-              {this.renderDescContent("HAIR", model.description.hair)}
+            <Descriptor title={"GENDER"} content={model.description.gender}/>
+            <Descriptor title={"HEIGHT"} content={model.description.height}/>
+            <Descriptor title={"HAIR"} content={model.description.hair}/>
             </div>
             <div className="description-box-col">
-              {this.renderDescContent("AGE", model.description.age)}
-              {this.renderDescContent("BUILD", model.description.build)}
-              {this.renderDescContent("EYES", model.description.eyes)}
+            <Descriptor title={"AGE"} content={model.description.age}/>
+            <Descriptor title={"BUILD"} content={model.description.build}/>
+            <Descriptor title={"EYES"} content={model.description.eyes}/>
             </div>
           </div>
-          {this.renderDescContent("MOTIVATION", model.description.motivation)}
+          <Descriptor title={"MOTIVATION"} content={model.description.motivation}/>
           <Divider title="OBLIGATION" />
           {model.obligations.map((n) => {
             key_counter++;
             return this.renderObligationContent(n, key_counter);
           })}
           <Divider title="MORALITY" />
-          {this.renderDescContent("STRENGTH", model.moarality.strength)}
-          {this.renderDescContent("WEAKNESS", model.moarality.weakness)}
-          {this.renderDescContent("CONFLICT", model.moarality.conflict)}
-          {this.renderDescContent("CURRENT", model.moarality.value)}
+          <Descriptor title={"STRENGTH"} content={model.morality.strength}/>
+          <Descriptor title={"WEAKNESS"} content={model.morality.weakness}/>
+          <Descriptor title={"CONFLICT"} content={model.morality.conflict}/>
+          <Descriptor title={"CURRENT"} content={model.morality.value}/>
           <Divider title="EXPERIENCE" />
-          {this.renderDescContent("TOTAL", model.experience.total)}
-          {this.renderDescContent("AVAILABLE", model.experience.available)}
+          <Descriptor title={"TOTAL"} content={model.experience.total}/>
+          <Descriptor title={"AVAILABLE"} content={model.experience.available}/>
         </div>
         <div className="character-background-box">
           <Divider title="BACKGROUND" />

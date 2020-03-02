@@ -6,7 +6,7 @@ import {
 import './SkillPage.css'
 
 import Characteristic from './Characteristic';
-import Divider from '../Utils/Divider';
+import Divider from '../Common/Divider';
 import Skill from './Skill';
 
 class SkillPage extends React.Component {
@@ -117,7 +117,6 @@ class SkillPage extends React.Component {
     fetch("/models/skill_model.json")
       .then(respponse => respponse.json())
       .then(json => this.setState({ skillModel: json }));
-      console.log("Skill page mounted");
   }
 
   render() {

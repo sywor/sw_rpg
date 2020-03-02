@@ -37,10 +37,6 @@
     font-size: 1.2rem;
 }
 
-.character-description-box {
-    display: flex;
-}
-
 .character-description-title {
     color: #656263;
     margin-right: 0.5rem;

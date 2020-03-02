@@ -39,3 +39,16 @@
   border-width: 1rem;
   margin-top: 10rem;
 }
+
+.pool-icon {
+  max-height: 25px;
+  margin: 0.1rem;
+}
+
+.divider-separator-line {    
+  background-color: #656263;
+  overflow: hidden;
+  border-width: 3px;
+  width: 100%;
+  margin: 0rem;
+}

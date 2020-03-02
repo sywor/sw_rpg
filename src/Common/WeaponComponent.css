@@ -1,0 +1,32 @@
+.weapon-root-box {
+    margin: 1rem 0rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.weapon-row {
+    display: flex;
+    font-family: "refrigeratordeluxeregular";
+    font-size: 1.2rem;
+}
+
+.weapon-desc-box {
+    display: flex;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.margin-left {
+    margin-left: 1rem;
+}
+
+.weapon-desc-title {
+    color: #656263;
+}
+
+.weapon-desc-content {
+    margin-left: 0.5rem;
+}

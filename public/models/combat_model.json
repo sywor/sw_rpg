@@ -1,0 +1,40 @@
+{
+    "weapons": [
+        {
+            "weapon_key": "blaster_rifle",
+            "condition": [
+                1,
+                1,
+                0
+            ],
+            "modification": {}
+        },
+        {
+            "weapon_key": "solid_projectile_pistol",
+            "condition": [
+                1,
+                0,
+                0
+            ],
+            "modification": {
+                "hard_points": 1
+            }
+        }
+    ],
+    "combat_stats": {
+        "soak": 3,
+        "wounds": {
+            "threshold": 16,
+            "current": 2
+        },
+        "defense": {
+            "melee": 0,
+            "range": 0
+        },
+        "strain": {
+            "threshold": 17,
+            "current": 4
+        }
+    },
+    "critical_injuries": []
+}
