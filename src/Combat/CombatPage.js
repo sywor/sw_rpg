@@ -47,7 +47,7 @@ class CombatPage extends React.Component {
               return (
                 <div>
                   <Weapon weapon={weapon_base} key={key_counter} />
-                  <hr className="divider-separator-line thin-line" />
+                  <hr className="divider-separator-line thin-line combat-weapons-margin" />
                 </div>);
             }
           })}
@@ -76,6 +76,17 @@ class CombatPage extends React.Component {
         }
         <div className="combat-title-margin">
           <Divider title="STATS" />
+        </div>
+        <div className="flex-box">
+          <div className="flex-box flex-column w25 combat-stats-component-padding">
+          <Divider title="SOAK" subtitle={true}/>
+          </div>
+          <div className="flex-box flex-column w25 combat-stats-component-padding">
+          <Divider title="WOUNDS" subtitle={true}/>
+          </div>
+          <div className="flex-box flex-column w50">
+          <Divider title="CRITICAL INJURIES" subtitle={true}/>
+          </div>
         </div>
       </div>
     );

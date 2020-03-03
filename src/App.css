@@ -56,3 +56,27 @@
 .divider-separator-line.thin-line {
   border-width: 1px;
 }
+
+.flex-box {
+  display: flex;
+}
+
+.flex-box.w25{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.flex-box.w50{
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.flex-column {
+  width: 100%;
+  flex-direction: column;
+}
+
+.refrigirator-font {
+  font-family: "refrigeratordeluxeregular";
+  font-size: 1.2rem;
+}

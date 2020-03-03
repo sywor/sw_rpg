@@ -17,35 +17,37 @@ class ArmorComponent extends React.Component {
         var key_counter = 0;
 
         return (
-            <div className="combat-root-box">
-                <div className="combat-row">
-                    <div className="combat-desc-box">
-                        <div className="combat-desc-title">NAME:</div>
+            <div className="flex-box flex-column">
+                <div className="flex-box refrigirator-font">
+                    <div className="flex-box combat-desc-content-width">
+                        <div className="combat-desc-title">NAME</div>
                         <div className="combat-desc-content">{this.props.armor.name}</div>
+                        <div className="combat-desc-content-dots"/>
                     </div>
-                    <div className="combat-desc-box margin-left-auto">
-                        <div className="combat-desc-title">DEFENCE:</div>
+                    <div className="flex-box margin-left-auto">
+                        <div className="combat-desc-title">DEFENCE</div>
                         <div className="combat-desc-content">{this.props.armor.defense}</div>
                     </div>
-                    <div className="combat-desc-box margin-left">
-                        <div className="combat-desc-title">SOAK:</div>
+                    <div className="flex-box margin-left">
+                        <div className="combat-desc-title">SOAK</div>
                         <div className="combat-desc-content">{this.props.armor.soak}</div>
                     </div>
-                    <div className="combat-desc-box margin-left">
-                        <div className="combat-desc-title">ENC:</div>
+                    <div className="flex-box margin-left">
+                        <div className="combat-desc-title">ENC</div>
                         <div className="combat-desc-content">{this.props.armor.encumbrance}</div>
                     </div>
-                    <div className="combat-desc-box margin-left">
-                        <div className="combat-desc-title">HP:</div>
+                    <div className="flex-box margin-left">
+                        <div className="combat-desc-title">HP</div>
                         <div className="combat-desc-content">{this.props.armor.hard_points}</div>
                     </div>
                 </div>
-                <div className="combat-row">
-                    <div className="combat-desc-box">
-                        <div className="combat-desc-title">SPECIAL:</div>
+                <div className="flex-box refrigirator-font">
+                    <div className="flex-box combat-desc-content-width">
+                        <div className="combat-desc-title">SPECIAL</div>
                         <div className="combat-desc-content">{this.props.armor.special}</div>
+                        <div className="combat-desc-content-dots"/>
                     </div>
-                    <div className="combat-desc-box margin-left-auto">
+                    <div className="flex-box margin-left-auto">
                         <div className="combat-desc-title">CONDITION</div>
                         <div className="combat-desc-content">
                             {this.props.armor.condition.map((n) => {

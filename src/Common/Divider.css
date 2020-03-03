@@ -7,8 +7,16 @@
 .divider-title {
     text-align: left;
     color: #656263;
-    font-size: 2rem;
     font-family: "refrigeratordeluxeregular";
+    white-space: nowrap;
+}
+
+.divider-title.main{
+    font-size: 2rem;
+}
+
+.divider-title.sub{
+    font-size: 1.2rem;
 }
 
 .divider-separator-box {
@@ -20,16 +28,31 @@
 
 .divider-separator-title {
     color: #d19857;
-    font-size: 1.3rem;
+    
     font-family: "aurebeshmedium";
+}
+
+.divider-separator-title.main {
+    font-size: 1.3rem;
+}
+
+.divider-separator-title.sub {
+    font-size: 0.9rem;
 }
 
 .divider-separator-line {    
     background-color: #656263;
-    overflow: hidden;
-    border-width: 3px;
+    overflow: hidden;    
     width: 100%;
     margin: 0rem;
+}
+
+.divider-separator-line.main {
+    border-width: 3px;
+}
+
+.divider-separator-line.sub {
+    border-width: 1px;
 }
 
 

@@ -5,10 +5,28 @@ class Divider extends React.Component {
     render() {
         return (
             <div className="divider-box">
-                <div className="divider-title">{this.props.title}</div>
+                <div className={
+                    (() => {
+                        return this.props.subtitle == true ?
+                        "divider-title sub" :
+                        "divider-title main";
+                    })()
+                    }>{this.props.title}</div>
                 <div className="divider-separator-box">
-                    <div className="divider-separator-title">{this.props.title}</div>
-                    <hr className="divider-separator-line"/>
+                    <div className={
+                    (() => {
+                        return this.props.subtitle == true ?
+                        "divider-separator-title sub" :
+                        "divider-separator-title main";
+                    })()
+                    }>{this.props.title}</div>
+                    <hr className={
+                    (() => {
+                        return this.props.subtitle == true ?
+                        "divider-separator-line sub" :
+                        "divider-separator-line main";
+                    })()
+                    }/>
                 </div>
             </div>
         )
