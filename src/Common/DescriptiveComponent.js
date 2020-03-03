@@ -6,12 +6,15 @@ const dots = " .................................................................
 
 class DescriptiveComponent extends React.Component {
 
-    render(){
+    render() {
         return (
-            <div className="descriptive-box">
-            <div className="descriptive-title">{this.props.title}</div>
-            <div className="descriptive-content">{this.props.content + dots}</div>
-          </div>
+            <div className="refrigirator-font flex-box">
+                <div className="flex-box content-width-100">
+                    <div className="title-gray">{this.props.title}</div>
+                    <div className="content">{this.props.content}</div>
+                    <div className="content-dots" />
+                </div>
+            </div>
         )
     }
 }

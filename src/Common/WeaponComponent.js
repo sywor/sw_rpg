@@ -4,7 +4,6 @@ import './CombatComponent.css';
 
 const empty_square = "/img/empty_square.svg";
 const red_square = "/img/red_square.svg";
-const dots = " ..................................................................................................................................................................................................................................................................................................";
 
 class WeaponComponent extends React.Component {
 
@@ -20,45 +19,45 @@ class WeaponComponent extends React.Component {
         return (
             <div className="flex-box flex-column">
                 <div className="flex-box refrigirator-font">
-                    <div className="flex-box combat-desc-content-width">
+                    <div className="flex-box content-width-100">
                         <div className="title-gray">NAME</div>
-                        <div className="combat-desc-content">{this.props.weapon.name}</div>
-                        <div className="combat-desc-content-dots"/>
+                        <div className="content">{this.props.weapon.name}</div>
+                        <div className="content-dots"/>
                     </div>
                     <div className="flex-box margin-left-auto">
                         <div className="title-gray">SKILL</div>
-                        <div className="combat-desc-content">{this.props.weapon.skill}</div>
+                        <div className="content">{this.props.weapon.skill}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">RANGE</div>
-                        <div className="combat-desc-content">{this.props.weapon.range}</div>
+                        <div className="content">{this.props.weapon.range}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">DMG</div>
-                        <div className="combat-desc-content">{this.props.weapon.damage}</div>
+                        <div className="content">{this.props.weapon.damage}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">CRIT</div>
-                        <div className="combat-desc-content">{this.props.weapon.critical}</div>
+                        <div className="content">{this.props.weapon.critical}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">ENC</div>
-                        <div className="combat-desc-content">{this.props.weapon.encumbrance}</div>
+                        <div className="content">{this.props.weapon.encumbrance}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">HP</div>
-                        <div className="combat-desc-content">{this.props.weapon.hard_points}</div>
+                        <div className="content">{this.props.weapon.hard_points}</div>
                     </div>
                 </div>
                 <div className="flex-box refrigirator-font">
-                    <div className="flex-box combat-desc-content-width">
+                    <div className="flex-box content-width-100">
                         <div className="title-gray">SPECIAL</div>
-                        <div className="combat-desc-content">{this.props.weapon.special}</div>
-                        <div className="combat-desc-content-dots"/>
+                        <div className="content">{this.props.weapon.special}</div>
+                        <div className="content-dots"/>
                     </div>
                     <div className="flex-box margin-left-auto">
                         <div className="title-gray">CONDITION</div>
-                        <div className="combat-desc-content">
+                        <div className="content">
                             {this.props.weapon.condition.map((n) => {
                                 key_counter++;
                                 return this.renderConditionIcon(n, key_counter)

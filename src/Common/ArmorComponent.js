@@ -19,37 +19,37 @@ class ArmorComponent extends React.Component {
         return (
             <div className="flex-box flex-column">
                 <div className="flex-box refrigirator-font">
-                    <div className="flex-box combat-desc-content-width">
+                    <div className="flex-box content-width-100">
                         <div className="title-gray">NAME</div>
-                        <div className="combat-desc-content">{this.props.armor.name}</div>
-                        <div className="combat-desc-content-dots"/>
+                        <div className="content">{this.props.armor.name}</div>
+                        <div className="content-dots"/>
                     </div>
                     <div className="flex-box margin-left-auto">
                         <div className="title-gray">DEFENCE</div>
-                        <div className="combat-desc-content">{this.props.armor.defense}</div>
+                        <div className="content">{this.props.armor.defense}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">SOAK</div>
-                        <div className="combat-desc-content">{this.props.armor.soak}</div>
+                        <div className="content">{this.props.armor.soak}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">ENC</div>
-                        <div className="combat-desc-content">{this.props.armor.encumbrance}</div>
+                        <div className="content">{this.props.armor.encumbrance}</div>
                     </div>
                     <div className="flex-box margin-left">
                         <div className="title-gray">HP</div>
-                        <div className="combat-desc-content">{this.props.armor.hard_points}</div>
+                        <div className="content">{this.props.armor.hard_points}</div>
                     </div>
                 </div>
                 <div className="flex-box refrigirator-font">
-                    <div className="flex-box combat-desc-content-width">
+                    <div className="flex-box content-width-100">
                         <div className="title-gray">SPECIAL</div>
-                        <div className="combat-desc-content">{this.props.armor.special}</div>
-                        <div className="combat-desc-content-dots"/>
+                        <div className="content">{this.props.armor.special}</div>
+                        <div className="content-dots"/>
                     </div>
                     <div className="flex-box margin-left-auto">
                         <div className="title-gray">CONDITION</div>
-                        <div className="combat-desc-content">
+                        <div className="content">
                             {this.props.armor.condition.map((n) => {
                                 key_counter++;
                                 return this.renderConditionIcon(n, key_counter)

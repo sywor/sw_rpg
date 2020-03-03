@@ -5,19 +5,3 @@
 .margin-left {
     margin-left: 1rem;
 }
-
-.combat-desc-content {
-    margin-left: 0.5rem;
-    white-space: nowrap;
-}
-
-.combat-desc-content-dots {
-    border-bottom: 0.07rem dotted black;
-    width: 100%;
-    height: 80%;
-    margin: 0rem 0.5rem;
-}
-
-.combat-desc-content-width {
-    width: 100%;
-}

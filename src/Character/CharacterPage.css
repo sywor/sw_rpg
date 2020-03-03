@@ -9,57 +9,10 @@
     padding: 0% 2%;
 }
 
-.character-description-box {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.avatar-box {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    max-height: 50%;
-}
-
-.description-box {
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-}
-
-.character-background-box {
-    width: 100%;
-}
-
-.character-font {
-    font-family: "refrigeratordeluxeregular";
-    font-size: 1.2rem;
-}
-
-.character-description-title {
-    color: #656263;
-    margin-right: 0.5rem;
-}
-
-.character-description-content {
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.description-box-row {
-    display: flex;
-    flex-direction: row;
-}
-
 .right-padding {
     padding-right: 0.5rem;
 }
 
 .right-margin {
     margin-right: 0.5rem;
-}
-
-.description-box-col {
-    max-width: 50%;
 }
