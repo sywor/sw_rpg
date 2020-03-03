@@ -25,11 +25,11 @@ class ArmorComponent extends React.Component {
                     </div>
                     <div className="combat-desc-box margin-left-auto">
                         <div className="combat-desc-title">DEFENCE:</div>
-                        <div className="combat-desc-content">{this.props.armor.skill}</div>
+                        <div className="combat-desc-content">{this.props.armor.defense}</div>
                     </div>
                     <div className="combat-desc-box margin-left">
                         <div className="combat-desc-title">SOAK:</div>
-                        <div className="combat-desc-content">{this.props.armor.range}</div>
+                        <div className="combat-desc-content">{this.props.armor.soak}</div>
                     </div>
                     <div className="combat-desc-box margin-left">
                         <div className="combat-desc-title">ENC:</div>
