@@ -52,3 +52,7 @@
   width: 100%;
   margin: 0rem;
 }
+
+.divider-separator-line.thin-line {
+  border-width: 1px;
+}

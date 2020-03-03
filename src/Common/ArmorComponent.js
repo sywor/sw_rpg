@@ -17,44 +17,43 @@ class ArmorComponent extends React.Component {
         var key_counter = 0;
 
         return (
-            <div className="weapon-root-box">
-                <div className="weapon-row">
-                    <div className="weapon-desc-box">
-                        <div className="weapon-desc-title">NAME:</div>
-                        <div className="weapon-desc-content">{this.props.armor.name}</div>
+            <div className="combat-root-box">
+                <div className="combat-row">
+                    <div className="combat-desc-box">
+                        <div className="combat-desc-title">NAME:</div>
+                        <div className="combat-desc-content">{this.props.armor.name}</div>
                     </div>
-                    <div className="weapon-desc-box margin-left-auto">
-                        <div className="weapon-desc-title">DEFENCE:</div>
-                        <div className="weapon-desc-content">{this.props.armor.skill}</div>
+                    <div className="combat-desc-box margin-left-auto">
+                        <div className="combat-desc-title">DEFENCE:</div>
+                        <div className="combat-desc-content">{this.props.armor.skill}</div>
                     </div>
-                    <div className="weapon-desc-box margin-left">
-                        <div className="weapon-desc-title">SOAK:</div>
-                        <div className="weapon-desc-content">{this.props.armor.range}</div>
+                    <div className="combat-desc-box margin-left">
+                        <div className="combat-desc-title">SOAK:</div>
+                        <div className="combat-desc-content">{this.props.armor.range}</div>
                     </div>
-                    <div className="weapon-desc-box margin-left">
-                        <div className="weapon-desc-title">ENC:</div>
-                        <div className="weapon-desc-content">{this.props.armor.encumbrance}</div>
+                    <div className="combat-desc-box margin-left">
+                        <div className="combat-desc-title">ENC:</div>
+                        <div className="combat-desc-content">{this.props.armor.encumbrance}</div>
                     </div>
-                    <div className="weapon-desc-box margin-left">
-                        <div className="weapon-desc-title">HP:</div>
-                        <div className="weapon-desc-content">{this.props.armor.hard_points}</div>
+                    <div className="combat-desc-box margin-left">
+                        <div className="combat-desc-title">HP:</div>
+                        <div className="combat-desc-content">{this.props.armor.hard_points}</div>
                     </div>
                 </div>
-                <div className="weapon-row">
-                    <div className="weapon-desc-box">
-                        <div className="weapon-desc-title">SPECIAL:</div>
-                        <div className="weapon-desc-content">{this.props.armor.special}</div>
+                <div className="combat-row">
+                    <div className="combat-desc-box">
+                        <div className="combat-desc-title">SPECIAL:</div>
+                        <div className="combat-desc-content">{this.props.armor.special}</div>
                     </div>
-                    <div className="weapon-desc-box margin-left-auto">
-                        <div className="weapon-desc-title">CONDITION</div>
-                        <div className="weapon-desc-content">
+                    <div className="combat-desc-box margin-left-auto">
+                        <div className="combat-desc-title">CONDITION</div>
+                        <div className="combat-desc-content">
                             {this.props.armor.condition.map((n) => {
                                 key_counter++;
                                 return this.renderConditionIcon(n, key_counter)
                             })}</div>
                     </div>
                 </div>
-                <hr className="divider-separator-line" />
             </div>
         )
     }

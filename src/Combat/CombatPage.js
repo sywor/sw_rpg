@@ -40,30 +40,43 @@ class CombatPage extends React.Component {
             weapon_base["condition"] = weapon["condition"];
             key_counter++;
 
-            return (<Weapon weapon={weapon_base} key={key_counter} />);
+            if (weapon === combat.weapons[combat.weapons.length - 1]) {
+              return (<Weapon weapon={weapon_base} key={key_counter} />);
+            }
+            else {
+              return (
+                <div>
+                  <Weapon weapon={weapon_base} key={key_counter} />
+                  <hr className="divider-separator-line thin-line" />
+                </div>);
+            }
           })}
+        <div className="combat-title-margin">
           <Divider title="ARMOR" />
-          {
-              (() => {
+        </div>
+        {
+          (() => {
 
-                var armor_base = armors[combat.armor.armor_key];
+            var armor_base = armors[combat.armor.armor_key];
 
-                for (var key of Object.keys(combat.armor.modification)) {
-                if (armor_base.hasOwnProperty(key)) {
-                  if (typeof armor_base[key] === 'string') {
-                    armor_base[key] += " " + combat.armor.modification[key];
-                  }
-                  else {
-                    armor_base[key] += combat.armor.modification[key];
-                  }
+            for (var key of Object.keys(combat.armor.modification)) {
+              if (armor_base.hasOwnProperty(key)) {
+                if (typeof armor_base[key] === 'string') {
+                  armor_base[key] += " " + combat.armor.modification[key];
+                }
+                else {
+                  armor_base[key] += combat.armor.modification[key];
                 }
               }
+            }
 
-              armor_base["condition"] = combat.armor["condition"];
-              return (<Armor armor={armor_base} />);
-            })()
-          }
+            armor_base["condition"] = combat.armor["condition"];
+            return (<Armor armor={armor_base} />);
+          })()
+        }
+        <div className="combat-title-margin">
           <Divider title="STATS" />
+        </div>
       </div>
     );
   }
