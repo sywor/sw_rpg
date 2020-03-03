@@ -20,35 +20,35 @@ class ArmorComponent extends React.Component {
             <div className="flex-box flex-column">
                 <div className="flex-box refrigirator-font">
                     <div className="flex-box combat-desc-content-width">
-                        <div className="combat-desc-title">NAME</div>
+                        <div className="title-gray">NAME</div>
                         <div className="combat-desc-content">{this.props.armor.name}</div>
                         <div className="combat-desc-content-dots"/>
                     </div>
                     <div className="flex-box margin-left-auto">
-                        <div className="combat-desc-title">DEFENCE</div>
+                        <div className="title-gray">DEFENCE</div>
                         <div className="combat-desc-content">{this.props.armor.defense}</div>
                     </div>
                     <div className="flex-box margin-left">
-                        <div className="combat-desc-title">SOAK</div>
+                        <div className="title-gray">SOAK</div>
                         <div className="combat-desc-content">{this.props.armor.soak}</div>
                     </div>
                     <div className="flex-box margin-left">
-                        <div className="combat-desc-title">ENC</div>
+                        <div className="title-gray">ENC</div>
                         <div className="combat-desc-content">{this.props.armor.encumbrance}</div>
                     </div>
                     <div className="flex-box margin-left">
-                        <div className="combat-desc-title">HP</div>
+                        <div className="title-gray">HP</div>
                         <div className="combat-desc-content">{this.props.armor.hard_points}</div>
                     </div>
                 </div>
                 <div className="flex-box refrigirator-font">
                     <div className="flex-box combat-desc-content-width">
-                        <div className="combat-desc-title">SPECIAL</div>
+                        <div className="title-gray">SPECIAL</div>
                         <div className="combat-desc-content">{this.props.armor.special}</div>
                         <div className="combat-desc-content-dots"/>
                     </div>
                     <div className="flex-box margin-left-auto">
-                        <div className="combat-desc-title">CONDITION</div>
+                        <div className="title-gray">CONDITION</div>
                         <div className="combat-desc-content">
                             {this.props.armor.condition.map((n) => {
                                 key_counter++;

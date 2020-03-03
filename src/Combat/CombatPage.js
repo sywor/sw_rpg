@@ -9,11 +9,23 @@ import Divider from '../Common/Divider';
 import Weapon from '../Common/WeaponComponent';
 import Armor from '../Common/ArmorComponent';
 
+const empty_square = "/img/empty_square.svg";
+const red_square = "/img/red_square.svg";
+
 class CombatPage extends React.Component {
 
   constructor(prop) {
     super(prop);
     this.state = {};
+  }
+
+  renderCritInjuryIcon(value, key) {
+    switch (value) {
+      case 1:
+        return <img src={red_square} className="pool-icon" key={key} />;
+      default:
+        return <img src={empty_square} className="pool-icon" key={key} />;
+    }
   }
 
   renderBody(combat, weapons, armors) {
@@ -79,13 +91,61 @@ class CombatPage extends React.Component {
         </div>
         <div className="flex-box">
           <div className="flex-box flex-column w25 combat-stats-component-padding">
-          <Divider title="SOAK" subtitle={true}/>
+            <Divider title="SOAK" subtitle={true} />
+            <div className="flex-box flex-column combat-stats-component-center">
+              <div className="title-gray refrigirator-font">VALUE</div>
+              <div>{combat.combat_stats.soak}</div>
+            </div>
+            <Divider title="DEFENSE" subtitle={true} />
+            <div className="flex-box">
+              <div className="flex-box flex-column combat-stats-component-center">
+                <div className="title-gray refrigirator-font">MELEE</div>
+                <div>{combat.combat_stats.defense.melee}</div>
+              </div> <div className="flex-box flex-column combat-stats-component-center">
+                <div className="title-gray refrigirator-font">RANGE</div>
+                <div>{combat.combat_stats.defense.range}</div>
+              </div>
+            </div>
           </div>
           <div className="flex-box flex-column w25 combat-stats-component-padding">
-          <Divider title="WOUNDS" subtitle={true}/>
+            <Divider title="WOUNDS" subtitle={true} />
+            <div className="flex-box">
+              <div className="flex-box flex-column combat-stats-component-center">
+                <div className="title-gray refrigirator-font">THRESHOLD</div>
+                <div>{combat.combat_stats.wounds.threshold}</div>
+              </div> <div className="flex-box flex-column combat-stats-component-center">
+                <div className="title-gray refrigirator-font">CURRENT</div>
+                <div>{combat.combat_stats.wounds.current}</div>
+              </div>
+            </div>
+            <Divider title="STRAIN" subtitle={true} />
+            <div className="flex-box">
+              <div className="flex-box flex-column combat-stats-component-center">
+                <div className="title-gray refrigirator-font">THRESHOLD</div>
+                <div>{combat.combat_stats.strain.threshold}</div>
+              </div> <div className="flex-box flex-column combat-stats-component-center">
+                <div className="title-gray refrigirator-font">CURRENT</div>
+                <div>{combat.combat_stats.strain.current}</div>
+              </div>
+            </div>
           </div>
           <div className="flex-box flex-column w50">
-          <Divider title="CRITICAL INJURIES" subtitle={true}/>
+            <Divider title="CRITICAL INJURIES" subtitle={true} />
+            {
+              combat.critical_injuries.map((injury) => {
+                return (
+                  <div className="flex-box combat-desc-content-width">
+                    {
+                      injury.servierity.map((n) => {
+                        key_counter++;
+                        return this.renderCritInjuryIcon(n, key_counter);
+                      })
+                    }
+                    <div className="combat-desc-content">{injury.description}</div>
+                    <div className="combat-desc-content-dots" />
+                  </div>);
+              })
+            }
           </div>
         </div>
       </div>

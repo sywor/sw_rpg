@@ -13,3 +13,7 @@
 .combat-stats-component-font {
     font-size: 1.5rem;
 }
+
+.combat-stats-component-center {
+    align-items: center;
+}

@@ -29,7 +29,7 @@
             1
         ],
         "modification": {
-            "special" : "Sealable"
+            "special": "Sealable"
         }
     },
     "combat_stats": {
@@ -47,5 +47,15 @@
             "current": 4
         }
     },
-    "critical_injuries": []
+    "critical_injuries": [
+        {
+            "servierity": [
+                1,
+                1,
+                0,
+                0
+            ],
+            "description": "some description"
+        }
+    ]
 }
