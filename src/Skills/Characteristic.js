@@ -7,12 +7,12 @@ class Characteristic extends React.Component {
             <div className="characteristic-frame">
                 <div className="container">
                     <div className="characteristic-value-box">
-                        <div className="characteristic-value">
+                        <div className="std-font gray characteristic-value">
                             {this.props.value}
                         </div>
                     </div>
                     <div className="characteristic-title-box">
-                        <h5 className="characteristic-title">{this.props.name}</h5>
+                        <div className="std-font gray characteristic-title">{this.props.name}</div>
                     </div>
                 </div>
             </div>

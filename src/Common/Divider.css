@@ -6,9 +6,8 @@
 
 .divider-title {
     text-align: left;
-    color: #656263;
-    font-family: "refrigeratordeluxeregular";
     white-space: nowrap;
+    font-weight: bold;
 }
 
 .divider-title.main{

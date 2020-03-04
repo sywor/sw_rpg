@@ -23,6 +23,7 @@
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.8);
   margin: auto;
+  padding: 0rem 1rem;
 }
 
 .spinner-position-box {
@@ -79,12 +80,16 @@
   justify-content: center;
 }
 
-.refrigirator-font {
-  font-family: "refrigeratordeluxeregular";
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+.std-font {
+  font-family: 'Chakra Petch', sans-serif;
   font-size: 1.2rem;
 }
 
-.title-gray {
+.gray {
   color: #656263;
 }
 

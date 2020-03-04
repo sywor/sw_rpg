@@ -1,18 +1,8 @@
 .character-box {
     display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    padding: 0% 2%;
+    flex-wrap: wrap;    
 }
 
 .right-padding {
     padding-right: 0.5rem;
-}
-
-.right-margin {
-    margin-right: 0.5rem;
 }

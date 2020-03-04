@@ -2,15 +2,13 @@ import React from 'react';
 import {
   withRouter
 } from "react-router-dom";
+import { renderRedPoolIcon, enrichItem } from '../Common/CommonMethods';
 
 import './CombatPage.css';
 
 import Divider from '../Common/Divider';
 import Weapon from '../Common/WeaponComponent';
 import Armor from '../Common/ArmorComponent';
-
-const empty_square = "/img/empty_square.svg";
-const red_square = "/img/red_square.svg";
 
 class CombatPage extends React.Component {
 
@@ -19,71 +17,51 @@ class CombatPage extends React.Component {
     this.state = {};
   }
 
-  renderCritInjuryIcon(value, key) {
-    switch (value) {
-      case 1:
-        return <img src={red_square} className="pool-icon" key={key} />;
-      default:
-        return <img src={empty_square} className="pool-icon" key={key} />;
-    }
-  }
-
   renderBody(combat, weapons, armors) {
 
     var key_counter = 0;
     return (
-      <div className="container">
+      <div>
         <Divider title="WEAPONS" />
         {
-          combat.weapons.map((weapon) => {
-            var weapon_base = weapons[weapon.weapon_key];
-
-            for (var key of Object.keys(weapon.modification)) {
-              if (weapon_base.hasOwnProperty(key)) {
-                if (typeof weapon_base[key] === 'string') {
-                  weapon_base[key] += " " + weapon.modification[key];
-                }
-                else {
-                  weapon_base[key] += weapon.modification[key];
-                }
-              }
-            }
-
-            weapon_base["condition"] = weapon["condition"];
+          (() => {
+            const enriched = enrichItem(weapons, combat.weapons);
             key_counter++;
 
-            if (weapon === combat.weapons[combat.weapons.length - 1]) {
-              return (<Weapon weapon={weapon_base} key={key_counter} />);
-            }
-            else {
-              return (
-                <div>
-                  <Weapon weapon={weapon_base} key={key_counter} />
-                  <hr className="divider-separator-line thin-line combat-weapons-margin" />
-                </div>);
-            }
-          })}
+            return enriched.map((weapon) => {
+              if (weapon.key === combat.weapons[combat.weapons.length - 1].key) {
+                return (<Weapon weapon={weapon} key={key_counter} />);
+              }
+              else {
+                return (
+                  <div>
+                    <Weapon weapon={weapon} key={key_counter} />
+                    <hr className="divider-separator-line thin-line combat-weapons-margin" />
+                  </div>);
+              }
+            })
+          })()
+        }
         <div className="combat-title-margin">
           <Divider title="ARMOR" />
         </div>
         {
           (() => {
+            const enriched = enrichItem(armors, combat.armor);
+            key_counter++;
 
-            var armor_base = armors[combat.armor.armor_key];
-
-            for (var key of Object.keys(combat.armor.modification)) {
-              if (armor_base.hasOwnProperty(key)) {
-                if (typeof armor_base[key] === 'string') {
-                  armor_base[key] += " " + combat.armor.modification[key];
-                }
-                else {
-                  armor_base[key] += combat.armor.modification[key];
-                }
+            return enriched.map((armor) => {
+              if (armor.key === combat.armor[combat.armor.length - 1].key) {
+                return (<Armor armor={armor} key={key_counter} />);
               }
-            }
-
-            armor_base["condition"] = combat.armor["condition"];
-            return (<Armor armor={armor_base} />);
+              else {
+                return (
+                  <div>
+                    return (<Armor armor={armor} key={key_counter} />);
+                    <hr className="divider-separator-line thin-line combat-weapons-margin" />
+                  </div>);
+              }
+            })
           })()
         }
         <div className="combat-title-margin">
@@ -93,38 +71,41 @@ class CombatPage extends React.Component {
           <div className="flex-box flex-column w25 combat-stats-component-padding">
             <Divider title="SOAK" subtitle={true} />
             <div className="flex-box flex-column combat-stats-component-center">
-              <div className="title-gray refrigirator-font">VALUE</div>
+              <div className="std-font gray">VALUE</div>
               <div>{combat.combat_stats.soak}</div>
             </div>
             <Divider title="DEFENSE" subtitle={true} />
-            <div className="flex-box">
+            <div className="flex-box justify-content-space-evenly">
               <div className="flex-box flex-column combat-stats-component-center">
-                <div className="title-gray refrigirator-font">MELEE</div>
+                <div className="std-font gray">MELEE</div>
                 <div>{combat.combat_stats.defense.melee}</div>
-              </div> <div className="flex-box flex-column combat-stats-component-center">
-                <div className="title-gray refrigirator-font">RANGE</div>
+              </div>
+              <div className="flex-box flex-column combat-stats-component-center">
+                <div className="std-font gray">RANGE</div>
                 <div>{combat.combat_stats.defense.range}</div>
               </div>
             </div>
           </div>
           <div className="flex-box flex-column w25 combat-stats-component-padding">
             <Divider title="WOUNDS" subtitle={true} />
-            <div className="flex-box">
+            <div className="flex-box justify-content-space-evenly">
               <div className="flex-box flex-column combat-stats-component-center">
-                <div className="title-gray refrigirator-font">THRESHOLD</div>
+                <div className="std-font gray">THRESHOLD</div>
                 <div>{combat.combat_stats.wounds.threshold}</div>
-              </div> <div className="flex-box flex-column combat-stats-component-center">
-                <div className="title-gray refrigirator-font">CURRENT</div>
+              </div>
+              <div className="flex-box flex-column combat-stats-component-center">
+                <div className="std-font gray">CURRENT</div>
                 <div>{combat.combat_stats.wounds.current}</div>
               </div>
             </div>
             <Divider title="STRAIN" subtitle={true} />
-            <div className="flex-box">
+            <div className="flex-box justify-content-space-evenly">
               <div className="flex-box flex-column combat-stats-component-center">
-                <div className="title-gray refrigirator-font">THRESHOLD</div>
+                <div className="std-font gray">THRESHOLD</div>
                 <div>{combat.combat_stats.strain.threshold}</div>
-              </div> <div className="flex-box flex-column combat-stats-component-center">
-                <div className="title-gray refrigirator-font">CURRENT</div>
+              </div>
+              <div className="flex-box flex-column combat-stats-component-center">
+                <div className="std-font gray">CURRENT</div>
                 <div>{combat.combat_stats.strain.current}</div>
               </div>
             </div>
@@ -138,11 +119,15 @@ class CombatPage extends React.Component {
                     {
                       injury.servierity.map((n) => {
                         key_counter++;
-                        return this.renderCritInjuryIcon(n, key_counter);
+                        return renderRedPoolIcon(n, key_counter);
                       })
                     }
-                    <div className="combat-desc-content">{injury.description}</div>
-                    <div className="combat-desc-content-dots" />
+                    <div className="flex-box std-font gray content-width-100">
+                      <div className="flex-box content-width-100">
+                        <div className="content">{injury.description}</div>
+                        <div className="content-dots" />
+                      </div>
+                    </div>
                   </div>);
               })
             }

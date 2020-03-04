@@ -17,6 +17,8 @@ class CharacterPage extends React.Component {
 
   renderBody(model) {
 
+    var key_index = 0;
+
     return model && (
       <div className="character-box">
         <div className="flex-box content-width-50 justify-content-center">
@@ -42,13 +44,16 @@ class CharacterPage extends React.Component {
           <Descriptor title={"MOTIVATION"} content={model.description.motivation} />
           <Divider title="OBLIGATION" />
           {model.obligations.map((obligation) => {
+
+            key_index++;
+            
             return (
-              <div className="flex-box">
+              <div className="flex-box" key={key_index}>
                 <div className="flex-grow">
                   <Descriptor title={"DESC"} content={obligation.description} />
                 </div>
-                <div className="flex-box refrigirator-font">
-                  <div className="title-gray">SIZE</div>
+                <div className="flex-box std-font">
+                  <div className="gray">SIZE</div>
                   <div className="content">{obligation.size}</div>
                 </div>
               </div>);

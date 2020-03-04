@@ -8,8 +8,8 @@ class Divider extends React.Component {
                 <div className={
                     (() => {
                         return this.props.subtitle == true ?
-                        "divider-title sub" :
-                        "divider-title main";
+                        "divider-title std-font gray sub" :
+                        "divider-title std-font gray main";
                     })()
                     }>{this.props.title}</div>
                 <div className="divider-separator-box">

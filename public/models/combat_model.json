@@ -1,7 +1,7 @@
 {
     "weapons": [
         {
-            "weapon_key": "blaster_rifle",
+            "key": "blaster_rifle",
             "condition": [
                 1,
                 1,
@@ -10,7 +10,7 @@
             "modification": {}
         },
         {
-            "weapon_key": "solid_projectile_pistol",
+            "key": "solid_projectile_pistol",
             "condition": [
                 1,
                 0,
@@ -21,17 +21,19 @@
             }
         }
     ],
-    "armor": {
-        "armor_key": "padded_light_armor",
-        "condition": [
-            1,
-            1,
-            1
-        ],
-        "modification": {
-            "special": "Sealable"
+    "armor": [
+        {
+            "key": "padded_light_armor",
+            "condition": [
+                1,
+                1,
+                1
+            ],
+            "modification": {
+                "special": "Sealable"
+            }
         }
-    },
+    ],
     "combat_stats": {
         "soak": 3,
         "wounds": {

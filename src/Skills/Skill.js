@@ -24,21 +24,23 @@ class Skill extends React.Component {
           <img src={career_skill} className="career-skill" />
         </td>
         <td>
-          <div className="refrigirator-font flex-box skill-title">
+          <div className="std-font flex-box skill-title">
             <div className="flex-box content-width-100">
-              <div className="title-gray">{this.props.name}</div>
+              <div className="gray">{this.props.name}</div>
               <div className="content-dots" />
             </div>
           </div>
         </td>
         <td>
-          <div className="refrigirator-font skill-char">{this.props.char}</div>
+          <div className="std-font gray skill-char">{this.props.char}</div>
         </td>
         <td>
-          {this.props.model.pool.map((n) => {
-            key_counter++;
-            return this.renderPoolIcon(n, key_counter)
-          })}
+          <div className="flex-box">
+            {this.props.model.pool.map((n) => {
+              key_counter++;
+              return this.renderPoolIcon(n, key_counter)
+            })}
+          </div>
         </td>
       </tr>
     );
