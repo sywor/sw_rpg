@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { createBrowserHistory } from 'history';
 
 import './App.css';
 import PlayingMenu from './Menus/PlayingMenu';
@@ -23,6 +24,12 @@ class App extends React.Component {
   }
 
   render() {
+    const history = createBrowserHistory();
+
+    const path = (/#!(\/.*)$/.exec(window.location.hash) || [])[1];
+    if (path) {
+      history.replace(path);
+    }
     return (
       <Router>
         <div className="background">
