@@ -36,9 +36,9 @@ class SkillPage extends React.Component {
         <div className="skill-divider">
           <Divider title="SKILLS" />
         </div>
-        <div className="flex-box">
+        <div className="flex-box skill-table">
           <div className="flex-box">
-            <table className="skill-table">
+            <table>
               <tbody>
                 <tr>
                   <th className="skill-head-title-career" />
@@ -69,7 +69,7 @@ class SkillPage extends React.Component {
             </table>
           </div>
           <div className="flex-box">
-            <table className="skill-table">
+            <table>
               <tbody>
                 <tr>
                   <th className="skill-head-title-career" />
