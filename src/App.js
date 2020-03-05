@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import './App.css';
-import PlayingMenu from './Menus/PlayingMenu';
+import Menu from './Menus/Menu';
 import CharacterPage from './Character/CharacterPage'
 import SkillPage from './Skills/SkillPage';
 import CombatPage from './Combat/CombatPage'
@@ -23,13 +23,32 @@ class App extends React.Component {
   }
 
   render() {
+
+    const main_menu_buttons = [
+      { path: "/create/start", name: "New Caracter" },
+      { path: "/playing/character", name: "Play" },
+      { path: "/manage/start", name: "GM" },
+    ]
+
+    const playing_menu_buttons = [
+      { path: "/playing/character", name: "Character" },
+      { path: "/playing/skills", name: "Skills" },
+      { path: "/playing/combat", name: "Combat" },
+      { path: "/playing/inventory", name: "Inventory" },
+      { path: "/playing/talent_trees", name: "Talent Trees" },
+      { path: "/playing/ship", name: "Ship" }
+    ]
+
     return (
       <Router>
         <div className="background">
           <div className="page-root-menu">
             <Switch>
-              <Route path="/playing/">
-                <PlayingMenu />
+            <Route path="/playing/">
+                <Menu buttons={playing_menu_buttons} />
+              </Route>
+              <Route path="/">
+                <Menu buttons={main_menu_buttons} />
               </Route>
             </Switch>
           </div>

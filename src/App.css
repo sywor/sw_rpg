@@ -80,6 +80,10 @@
   justify-content: center;
 }
 
+.align-items-center {
+  align-items: center;
+}
+
 .justify-content-space-evenly {
   justify-content: space-evenly;
 }
