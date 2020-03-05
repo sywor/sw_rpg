@@ -29,13 +29,14 @@ class CombatPage extends React.Component {
             key_counter++;
 
             return enriched.map((weapon) => {
+              key_counter++;
               if (weapon.key === combat.weapons[combat.weapons.length - 1].key) {
                 return (<Weapon weapon={weapon} key={key_counter} />);
               }
               else {
                 return (
-                  <div>
-                    <Weapon weapon={weapon} key={key_counter} />
+                  <div key={key_counter}>
+                    <Weapon weapon={weapon} />
                     <hr className="divider-separator-line thin-line combat-weapons-margin" />
                   </div>);
               }
@@ -114,8 +115,9 @@ class CombatPage extends React.Component {
             <Divider title="CRITICAL INJURIES" subtitle={true} />
             {
               combat.critical_injuries.map((injury) => {
+                key_counter++;
                 return (
-                  <div className="flex-box combat-desc-content-width">
+                  <div className="flex-box combat-desc-content-width" key={key_counter}>
                     {
                       injury.servierity.map((n) => {
                         key_counter++;

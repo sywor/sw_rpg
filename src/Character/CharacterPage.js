@@ -22,7 +22,7 @@ class CharacterPage extends React.Component {
     return model && (
       <div className="character-box">
         <div className="flex-box content-width-50 justify-content-center">
-          <img src={model.description.avatar} />
+          <img src={model.description.avatar} alt="avatar"/>
         </div>
         <div className="flex-box content-width-50 flex-column">
           <Divider title="DESCRIPTION" />

@@ -21,7 +21,7 @@ class Skill extends React.Component {
     return (
       <tr>
         <td>
-          <img src={career_skill} className="career-skill" />
+          <img src={career_skill} className="career-skill" alt="career_skill"/>
         </td>
         <td>
           <div className="std-font flex-box skill-title">
@@ -49,13 +49,13 @@ class Skill extends React.Component {
   renderPoolIcon(i, key) {
     switch (i) {
       case 1:
-        return <img src={skill_pool_yellow} className="pool-icon" key={key} />;
+        return <img src={skill_pool_yellow} className="pool-icon" key={key} alt="skill_pool_yellow"/>;
       case 2:
-        return <img src={skill_pool_green_right} className="pool-icon" key={key} />;
+        return <img src={skill_pool_green_right} className="pool-icon" key={key} alt="skill_pool_green_right"/>;
       case 3:
-        return <img src={skill_pool_green_left} className="pool-icon" key={key} />;
+        return <img src={skill_pool_green_left} className="pool-icon" key={key} alt="skill_pool_green_left"/>;
       default:
-        return <img src={skill_pool_empty} className="pool-icon" key={key} />;
+        return <img src={skill_pool_empty} className="pool-icon" key={key} alt="skill_pool_empty"/>;
     }
   }
 }

@@ -6,9 +6,9 @@ const red_square = "/img/red_square.svg";
 function renderRedPoolIcon(value, key) {
     switch (value) {
         case 1:
-            return <img src={red_square} className="pool-icon" key={key} />;
+            return <img src={red_square} className="pool-icon" key={key} alt="red_square"/>;
         default:
-            return <img src={empty_square} className="pool-icon" key={key} />;
+            return <img src={empty_square} className="pool-icon" key={key} alt="empty_square"/>;
     }
 }
 
