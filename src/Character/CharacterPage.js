@@ -69,7 +69,7 @@ class CharacterPage extends React.Component {
         </div>
         <div className="content-width-100">
           <Divider title="BACKGROUND" />
-          <div className="character-font">{model.background}</div>
+          <div className="std-font">{model.background}</div>
         </div>
       </div>)
   }

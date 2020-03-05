@@ -4,14 +4,20 @@
     height: 100%;
 }
 
-.menu-button {    
-    font-size: 1.5rem;
+.menu-button {
+    font-size: rem;
     margin: 0rem 0.5rem;
-    user-select: none; 
+    user-select: none;
 }
 
 .menu-button-color {
     color: #858080;
+}
+
+.menu-button-color:hover {
+    text-decoration: underline;
+    text-decoration-color: #0078d7;
+    color: white;
 }
 
 .menu-button-content-selected {
