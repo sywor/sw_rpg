@@ -1,0 +1,16 @@
+.margin-top {
+    margin-top: 2rem;
+}
+
+.equip-icon {
+    margin-right: 1rem;
+    transform: rotate(90deg);
+}
+
+.equip-icon.green {
+    color: green;
+}
+
+.equip-icon.red {
+    color: red;
+}

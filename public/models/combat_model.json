@@ -1,39 +1,4 @@
 {
-    "weapons": [
-        {
-            "key": "blaster_rifle",
-            "condition": [
-                1,
-                1,
-                0
-            ],
-            "modification": {}
-        },
-        {
-            "key": "solid_projectile_pistol",
-            "condition": [
-                1,
-                0,
-                0
-            ],
-            "modification": {
-                "hard_points": 1
-            }
-        }
-    ],
-    "armor": [
-        {
-            "key": "padded_light_armor",
-            "condition": [
-                1,
-                1,
-                1
-            ],
-            "modification": {
-                "special": "Sealable"
-            }
-        }
-    ],
     "combat_stats": {
         "soak": 3,
         "wounds": {

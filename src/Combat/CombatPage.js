@@ -17,27 +17,29 @@ class CombatPage extends React.Component {
     this.state = {};
   }
 
-  renderBody(combat, weapons, armors) {
+  renderBody(inventory, combat, weapons, armors) {
 
-    var key_counter = 0;
+    let equipedWeapons = inventory.weapons.filter(weapon => weapon.equiped);
+    let equipedArmor = inventory.armor.filter(armor => armor.equiped);
+    let key_counter = 0;
+
     return (
       <div>
         <Divider title="WEAPONS" />
         {
           (() => {
-            const enriched = enrichItem(weapons, combat.weapons);
-            key_counter++;
+            const enriched = enrichItem(weapons, equipedWeapons);
 
             return enriched.map((weapon) => {
               key_counter++;
-              if (weapon.key === combat.weapons[combat.weapons.length - 1].key) {
+              if (weapon.id === equipedWeapons[equipedWeapons.length - 1].id) {
                 return (<Weapon weapon={weapon} key={key_counter} />);
               }
               else {
                 return (
                   <div key={key_counter}>
                     <Weapon weapon={weapon} />
-                    <hr className="divider-separator-line thin-line combat-weapons-margin" />
+                    <hr className="divider-separator-line thin-line" />
                   </div>);
               }
             })
@@ -48,18 +50,18 @@ class CombatPage extends React.Component {
         </div>
         {
           (() => {
-            const enriched = enrichItem(armors, combat.armor);
-            key_counter++;
+            const enriched = enrichItem(armors, equipedArmor);
 
             return enriched.map((armor) => {
-              if (armor.key === combat.armor[combat.armor.length - 1].key) {
+              key_counter++;
+              if (armor.id === equipedArmor[equipedArmor.length - 1].id) {
                 return (<Armor armor={armor} key={key_counter} />);
               }
               else {
                 return (
-                  <div>
-                    return (<Armor armor={armor} key={key_counter} />);
-                    <hr className="divider-separator-line thin-line combat-weapons-margin" />
+                  <div key={key_counter}>
+                    <Armor armor={armor} />
+                    <hr className="divider-separator-line thin-line" />
                   </div>);
               }
             })
@@ -140,16 +142,19 @@ class CombatPage extends React.Component {
   }
 
   async componentDidMount() {
-    let [combat_model, weapon_models, armor_models] = await Promise.all([
+    let [inventory_model, combat_model, weapon_models, armor_models] = await Promise.all([
+      fetch("/models/inventory_model.json"),
       fetch("/models/combat_model.json"),
       fetch("/models/weapon_models.json"),
       fetch("/models/armor_models.json")
     ]);
 
+    let inventory = await inventory_model.json();
     let combat = await combat_model.json();
     let weapons = await weapon_models.json();
     let armors = await armor_models.json();
 
+    this.setState({ inventory_model: inventory });
     this.setState({ combat_model: combat });
     this.setState({ base_weapons: weapons });
     this.setState({ base_armors: armors });
@@ -157,12 +162,13 @@ class CombatPage extends React.Component {
 
   render() {
 
+    var inventory = this.state.inventory_model;
     var combat = this.state.combat_model;
     var weapons = this.state.base_weapons;
     var armors = this.state.base_armors;
 
-    if (combat && weapons && armors) {
-      return this.renderBody(combat, weapons, armors);
+    if (inventory && combat && weapons && armors) {
+      return this.renderBody(inventory, combat, weapons, armors);
     }
     else {
       return (

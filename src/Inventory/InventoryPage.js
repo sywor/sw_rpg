@@ -2,6 +2,7 @@ import React from 'react';
 import {
   withRouter
 } from "react-router-dom";
+import { enrichItem } from '../Common/CommonMethods';
 
 import './InventoryPage.css';
 
@@ -20,41 +21,119 @@ class InventoryPage extends React.Component {
 
     var key_counter = 0;
     return (
-      <div className="container">
+      <div className="flex-box flex-column">
         <Divider title="WEAPONS" />
         {
-          inventory.weapons.map((weapon) => {
-            var weapon_base = weapons[weapon.weapon_key];
-
-            for (var key of Object.keys(weapon.modification)) {
-              if (weapon_base.hasOwnProperty(key)) {
-                if (typeof weapon_base[key] === 'string') {
-                  weapon_base[key] += " " + weapon.modification[key];
-                }
-                else {
-                  weapon_base[key] += weapon.modification[key];
-                }
-              }
-            }
-
-            weapon_base["condition"] = weapon["condition"];
+          (() => {
             key_counter++;
 
-            if (weapon === inventory.weapons[inventory.weapons.length - 1]) {
-              return (<Weapon weapon={weapon_base} key={key_counter} />);
-            }
-            else {
-              return (
-                <div>
-                  <Weapon weapon={weapon_base} key={key_counter} />
-                  <hr className="divider-separator-line thin-line combat-weapons-margin" />
-                </div>);
-            }
-          })}
-        <div className="combat-title-margin">
+            return weapons.map((weapon) => {
+              key_counter++;
+              if (weapon.id === inventory.weapons[inventory.weapons.length - 1].id) {
+                return (
+                  <div className="flex-box flex-column" key={key_counter}>
+                    <div className="flex-box">
+                      <Weapon weapon={weapon} />
+                      <div className="flex-box" onClick={() => {
+                        this.setState(oldState => {
+                          let tmp = oldState.weapons.find(w => w.id === weapon.id);
+                          tmp.equiped = !tmp.equiped;
+                          return oldState;
+                        });
+                      }}>
+                        {weapon.equiped
+                          ? <i className="fas fa-sign-in-alt fa-2x equip-icon green" />
+                          : <i className="fas fa-sign-out-alt fa-2x equip-icon red" />
+                        }
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              else {
+                return (
+                  <div className="flex-box flex-column" key={key_counter}>
+                    <div className="flex-box">
+                      <Weapon weapon={weapon} />
+                      <div className="flex-box" onClick={() => {
+                        this.setState(oldState => {
+                          let tmp = oldState.weapons.find(w => w.id === weapon.id);
+                          tmp.equiped = !tmp.equiped;
+                          return oldState;
+                        });
+                      }}>
+                        {weapon.equiped
+                          ? <i className="fas fa-sign-in-alt fa-2x equip-icon green" />
+                          : <i className="fas fa-sign-out-alt fa-2x equip-icon red" />
+                        }
+                      </div>
+                    </div>
+                    <hr className="divider-separator-line thin-line" />
+                  </div>);
+              }
+            })
+          })()
+        }
+        <div className="margin-top">
           <Divider title="ARMOR" />
         </div>
-      </div>);
+        {
+          (() => {
+
+            key_counter++;
+
+            return armors.map((armor) => {
+              key_counter++;
+              if (armor.id == inventory.armor[inventory.armor.length - 1].id) {
+                return (
+                  <div className="flex-box flex-column" key={key_counter}>
+                    <div className="flex-box">
+                      <Armor armor={armor} />
+                      <div className="flex-box" onClick={() => {
+                        this.setState(oldState => {
+                          let tmp = oldState.armors.find(a => a.id === armor.id);
+                          tmp.equiped = !tmp.equiped;
+                          return oldState;
+                        });
+                      }}>
+                        {armor.equiped
+                          ? <i className="fas fa-sign-in-alt fa-2x equip-icon green" />
+                          : <i className="fas fa-sign-out-alt fa-2x equip-icon red" />
+                        }
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              else {
+                return (
+                  <div className="flex-box flex-column" key={key_counter}>
+                    <div className="flex-box">
+                      <Armor armor={armor} />
+                      <div className="flex-box" onClick={() => {
+                        this.setState(oldState => {
+                          let tmp = oldState.armors.find(a => a.id === armor.id);
+                          tmp.equiped = !tmp.equiped;
+                          return oldState;
+                        });
+                      }}>
+                        {armor.equiped
+                          ? <i className="fas fa-sign-in-alt fa-2x equip-icon green" />
+                          : <i className="fas fa-sign-out-alt fa-2x equip-icon red" />
+                        }
+                      </div>
+                    </div>
+                    <hr className="divider-separator-line thin-line" />
+                  </div>
+                );
+              }
+            })
+          })()
+        }
+        <div className="margin-top">
+          <Divider title="ITEMS" />
+        </div>
+      </div >);
   }
 
   async componentDidMount() {
@@ -68,15 +147,18 @@ class InventoryPage extends React.Component {
     let weapons = await weapon_models.json();
     let armors = await armor_models.json();
 
-    this.setState({ inventory_model: inventory });
-    this.setState({ base_weapons: weapons });
-    this.setState({ base_armors: armors });
+    let enriched_weapons = enrichItem(weapons, inventory.weapons);
+    const enriched_armors = enrichItem(armors, inventory.armor);
+
+    this.setState({ inventory: inventory });
+    this.setState({ weapons: enriched_weapons });
+    this.setState({ armors: enriched_armors });
   }
 
   render() {
-    var inventory = this.state.inventory_model;
-    var weapons = this.state.base_weapons;
-    var armors = this.state.base_armors;
+    var inventory = this.state.inventory;
+    var weapons = this.state.weapons;
+    var armors = this.state.armors;
 
     if (inventory && weapons && armors) {
       return this.renderBody(inventory, weapons, armors);

@@ -1,4 +1,67 @@
 {
-    "weapons": [],
-    "armor":[]
+    "weapons": [
+        {
+            "id": "41f11c7a-8793-4c7f-8b4a-8910758f4732",
+            "type_key": "blaster_rifle",
+            "condition": [
+                1,
+                1,
+                0
+            ],
+            "modification": {},
+            "equiped": true
+        },
+        {
+            "id": "eb1e2e42-5f2f-4a4b-a6ba-5e6d772c4c9b",
+            "type_key": "solid_projectile_pistol",
+            "condition": [
+                1,
+                0,
+                0
+            ],
+            "modification": {
+                "hard_points": 1
+            },
+            "equiped": true
+        },
+        {
+            "id": "4d38b470-0246-48da-b600-ace3550e1862",
+            "type_key": "blaster_rifle",
+            "condition": [
+                0,
+                0,
+                0
+            ],
+            "modification": {},
+            "equiped": false
+        }
+    ],
+    "armor": [
+        {
+            "id": "d68ceeff-91b0-4dc6-a178-e47f6b745168",
+            "type_key": "padded_light_armor",
+            "condition": [
+                1,
+                1,
+                1
+            ],
+            "modification": {
+                "special": "Sealable"
+            },
+            "equiped": true
+        },
+        {
+            "id": "e741d9e9-ab82-41af-8eae-8b541f8a0588",
+            "type_key": "padded_light_armor",
+            "condition": [
+                0,
+                0,
+                0
+            ],
+            "modification": {
+                "special": "Sealable"
+            },
+            "equiped": false
+        }
+    ]
 }

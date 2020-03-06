@@ -6,16 +6,22 @@ const red_square = "/img/red_square.svg";
 function renderRedPoolIcon(value, key) {
     switch (value) {
         case 1:
-            return <img src={red_square} className="pool-icon" key={key} alt="red_square"/>;
+            return <img src={red_square} className="pool-icon" key={key} alt="red_square" />;
         default:
-            return <img src={empty_square} className="pool-icon" key={key} alt="empty_square"/>;
+            return <img src={empty_square} className="pool-icon" key={key} alt="empty_square" />;
     }
 }
 
 function enrichItem(base, items) {
 
     return items.map((item) => {
-        const base_data = Object.assign({}, { key: item.key }, base[item.key]);
+        const base_data = Object.assign({}, 
+            { 
+                id: item.id, 
+                type_key: item.type_key, 
+                equiped: item.equiped
+            }, 
+            base[item.type_key]);
 
         for (var key of Object.keys(item.modification)) {
             if (base_data.hasOwnProperty(key)) {

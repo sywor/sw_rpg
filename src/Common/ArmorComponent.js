@@ -16,7 +16,7 @@ class ArmorComponent extends React.Component {
         var key_counter = 0;
 
         return (
-            <div className="flex-box flex-column">
+            <div className="flex-box flex-column content-width-100">
                 <div className="flex-box std-font gray">
                     <div className="flex-box content-width-100">
                         <div className="gray">NAME</div>

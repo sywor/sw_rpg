@@ -55,6 +55,7 @@
 
 .divider-separator-line.thin-line {
   border-width: 1px;
+  margin: 1rem 0rem;
 }
 
 .flex-box {
