@@ -71,7 +71,7 @@ class CombatPage extends React.Component {
           <Divider title="STATS" />
         </div>
         <div className="flex-box">
-          <div className="flex-box flex-column w25 combat-stats-component-padding">
+          <div className="flex-box flex-column combat-stats-component-padding flex-to-fit">
             <Divider title="SOAK" subtitle={true} />
             <div className="flex-box flex-column combat-stats-component-center">
               <div className="std-font gray">VALUE</div>
@@ -89,7 +89,7 @@ class CombatPage extends React.Component {
               </div>
             </div>
           </div>
-          <div className="flex-box flex-column w25 combat-stats-component-padding">
+          <div className="flex-box flex-column combat-stats-component-padding flex-to-fit">
             <Divider title="WOUNDS" subtitle={true} />
             <div className="flex-box justify-content-space-evenly">
               <div className="flex-box flex-column combat-stats-component-center">
@@ -113,7 +113,7 @@ class CombatPage extends React.Component {
               </div>
             </div>
           </div>
-          <div className="flex-box flex-column w50">
+          <div className="flex-box flex-column flex-to-fit">
             <Divider title="CRITICAL INJURIES" subtitle={true} />
             {
               combat.critical_injuries.map((injury) => {
@@ -129,7 +129,7 @@ class CombatPage extends React.Component {
                     <div className="flex-box std-font gray content-width-100">
                       <div className="flex-box content-width-100">
                         <div className="content">{injury.description}</div>
-                        <div className="content-dots" />
+                        <div className="content-dots combat-critical-injury-dots" />
                       </div>
                     </div>
                   </div>);
@@ -172,11 +172,9 @@ class CombatPage extends React.Component {
     }
     else {
       return (
-        <div className="container skill-root">
-          <div className="spinner-position-box">
-            <div className="spinner-border spinner-size" role="status">
-              <span className="sr-only">Loading...</span>
-            </div>
+        <div className="spinner-position-box">
+          <div className="spinner-border spinner-size" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       )

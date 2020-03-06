@@ -165,11 +165,9 @@ class InventoryPage extends React.Component {
     }
     else {
       return (
-        <div className="container skill-root">
-          <div className="spinner-position-box">
-            <div className="spinner-border spinner-size" role="status">
-              <span className="sr-only">Loading...</span>
-            </div>
+        <div className="spinner-position-box">
+          <div className="spinner-border spinner-size" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       )

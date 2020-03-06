@@ -41,7 +41,7 @@
 }
 
 .pool-icon {
-  max-height: 25px;
+  max-height: 1.2rem;
   margin: 0.1rem;
 }
 
@@ -105,8 +105,8 @@
   width: 50%;
 }
 
-.flex-grow {
-  flex: 1 0 auto;
+.flex-to-fit {
+  flex: 1 1 auto;
 }
 
 .content-dots {

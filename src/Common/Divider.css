@@ -26,24 +26,26 @@
 }
 
 .divider-separator-title {
-    color: #d19857;
-    
+    color: #d19857;    
     font-family: "aurebeshmedium";
 }
 
 .divider-separator-title.main {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin: 0.2rem;
 }
 
 .divider-separator-title.sub {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    margin: 0.1rem;
 }
 
 .divider-separator-line {    
-    background-color: #656263;
     overflow: hidden;    
     width: 100%;
     margin: 0rem;
+    color: #656263;
+    border-bottom: solid;
 }
 
 .divider-separator-line.main {

@@ -49,7 +49,7 @@ class CharacterPage extends React.Component {
             
             return (
               <div className="flex-box" key={key_index}>
-                <div className="flex-grow">
+                <div className="flex-to-fit">
                   <Descriptor title={"DESC"} content={obligation.description} />
                 </div>
                 <div className="flex-box std-font">
@@ -82,13 +82,11 @@ class CharacterPage extends React.Component {
 
   render() {
     return this.renderBody(this.state.characterModel) ||
-      <div className="container skill-root">
         <div className="spinner-position-box">
           <div className="spinner-border spinner-size" role="status">
             <span className="sr-only">Loading...</span>
           </div>
-        </div>
-      </div>;
+        </div>;
   }
 }
 

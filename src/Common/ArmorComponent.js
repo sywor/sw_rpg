@@ -17,7 +17,7 @@ class ArmorComponent extends React.Component {
 
         return (
             <div className="flex-box flex-column content-width-100">
-                <div className="flex-box std-font gray">
+                <div className="flex-box std-font">
                     <div className="flex-box content-width-100">
                         <div className="gray">NAME</div>
                         <div className="content">{this.props.armor.name}</div>
@@ -40,7 +40,7 @@ class ArmorComponent extends React.Component {
                         <div className="content">{this.props.armor.hard_points}</div>
                     </div>
                 </div>
-                <div className="flex-box std-font gray">
+                <div className="flex-box std-font combat-margin-top">
                     <div className="flex-box content-width-100">
                         <div className="gray">SPECIAL</div>
                         <div className="content">{this.props.armor.special}</div>

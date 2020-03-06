@@ -48,7 +48,7 @@ class WeaponComponent extends React.Component {
                         <div className="content">{this.props.weapon.hard_points}</div>
                     </div>
                 </div>
-                <div className="flex-box std-font">
+                <div className="flex-box std-font combat-margin-top">
                     <div className="flex-box content-width-100">
                         <div className="gray">SPECIAL</div>
                         <div className="content">{this.props.weapon.special}</div>

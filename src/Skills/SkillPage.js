@@ -24,7 +24,7 @@ class SkillPage extends React.Component {
           <div className="characteristics-title-box">
             <div className="std-font gray characteristics-title">Characteristics</div>
           </div>
-          <div className="row characteristics-value-box">
+          <div className="flex-box characteristics-value-box">
             <Characteristic name="Brawn" value={model.characteristics.brawn} />
             <Characteristic name="Agility" value={model.characteristics.agility} />
             <Characteristic name="Intelect" value={model.characteristics.intelect} />
@@ -125,13 +125,11 @@ class SkillPage extends React.Component {
   render() {
 
     return this.renderBody(this.state.skillModel) ||
-      <div className="container skill-root">
         <div className="spinner-position-box">
           <div className="spinner-border spinner-size" role="status">
             <span className="sr-only">Loading...</span>
           </div>
-        </div>
-      </div>;
+        </div>;
   }
 }
 

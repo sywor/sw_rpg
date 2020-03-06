@@ -13,3 +13,7 @@
 .combat-stats-component-center {
     align-items: center;
 }
+
+.combat-critical-injury-dots {
+    margin-right: unset;
+}
