@@ -1,7 +1,7 @@
 import React from 'react';
-import {
-  withRouter
-} from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { connect } from 'react-redux'
+import { SetCharacterName } from '../Redux/Actions';
 
 import './CharacterPage.css';
 
@@ -22,11 +22,11 @@ class CharacterPage extends React.Component {
     return model && (
       <div className="character-box">
         <div className="flex-box content-width-50 justify-content-center">
-          <img src={model.description.avatar} alt="avatar"/>
+          <img src={model.description.avatar} alt="avatar" />
         </div>
-        <div className="flex-box content-width-50 flex-column">
+        <div className="flex-box content-width-50 flex-column" onClick={() => this.props.clicked("Test")}>
           <Divider title="DESCRIPTION" />
-          <Descriptor title={"NAME"} content={model.description.name} />
+          <Descriptor title={"NAME"} content={model.description.name}/>
           <Descriptor title={"SPECIES"} content={model.description.species} />
           <Descriptor title={"CAREER"} content={model.description.career} />
           <div className="flex-box">
@@ -46,7 +46,7 @@ class CharacterPage extends React.Component {
           {model.obligations.map((obligation) => {
 
             key_index++;
-            
+
             return (
               <div className="flex-box" key={key_index}>
                 <div className="flex-to-fit">
@@ -74,20 +74,24 @@ class CharacterPage extends React.Component {
       </div>)
   }
 
-  componentDidMount() {
-    fetch("/models/character_model.json")
-      .then(respponse => respponse.json())
-      .then(json => this.setState({ characterModel: json }));
-  }
-
   render() {
-    return this.renderBody(this.state.characterModel) ||
-        <div className="spinner-position-box">
-          <div className="spinner-border spinner-size" role="status">
-            <span className="sr-only">Loading...</span>
-          </div>
-        </div>;
+    return this.renderBody(this.props.character) ||
+      <div className="spinner-position-box">
+        <div className="spinner-border spinner-size" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>;
   }
 }
 
-export default withRouter(CharacterPage);
+const mapStateToProps = state => {
+  return !state.character.isFetching ?
+    {
+      character: state.character
+    } : {};
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+  { clicked: SetCharacterName }
+)(CharacterPage));

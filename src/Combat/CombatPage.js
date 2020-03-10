@@ -1,7 +1,6 @@
 import React from 'react';
-import {
-  withRouter
-} from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { connect } from 'react-redux'
 import { renderRedPoolIcon, enrichItem } from '../Common/CommonMethods';
 
 import './CombatPage.css';
@@ -142,28 +141,22 @@ class CombatPage extends React.Component {
   }
 
   async componentDidMount() {
-    let [inventory_model, combat_model, weapon_models, armor_models] = await Promise.all([
-      fetch("/models/inventory_model.json"),
-      fetch("/models/combat_model.json"),
+    let [weapon_models, armor_models] = await Promise.all([
       fetch("/models/weapon_models.json"),
       fetch("/models/armor_models.json")
     ]);
 
-    let inventory = await inventory_model.json();
-    let combat = await combat_model.json();
     let weapons = await weapon_models.json();
     let armors = await armor_models.json();
 
-    this.setState({ inventory_model: inventory });
-    this.setState({ combat_model: combat });
     this.setState({ base_weapons: weapons });
     this.setState({ base_armors: armors });
   }
 
   render() {
 
-    var inventory = this.state.inventory_model;
-    var combat = this.state.combat_model;
+    var inventory = this.props.inventory;
+    var combat = this.props.combat;
     var weapons = this.state.base_weapons;
     var armors = this.state.base_armors;
 
@@ -182,4 +175,15 @@ class CombatPage extends React.Component {
   }
 }
 
-export default withRouter(CombatPage);
+const mapStateToProps = state => {
+  return !state.combat.isFetching ?
+    {
+      combat: state.combat,
+      inventory: state.inventory
+    } : {};
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+  {}
+)(CombatPage));

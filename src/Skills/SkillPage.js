@@ -1,7 +1,6 @@
 import React from 'react';
-import {
-  withRouter
-} from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { connect } from 'react-redux'
 
 import './SkillPage.css'
 
@@ -46,25 +45,25 @@ class SkillPage extends React.Component {
                   <th className="std-font gray skill-head-title-char">CHARS</th>
                   <th className="std-font gray skill-head-title-pool">POOL</th>
                 </tr>
-                <Skill name="Astrogation" char="INT" model={model.skills.astrogation} />
-                <Skill name="Athletics" char="BR" model={model.skills.athletics} />
-                <Skill name="Charm" char="PR" model={model.skills.charm} />
-                <Skill name="Coercion" char="WIL" model={model.skills.coercion} />
-                <Skill name="Computers" char="INT" model={model.skills.computers} />
-                <Skill name="Cool" char="PR" model={model.skills.cool} />
-                <Skill name="Coordination" char="AG" model={model.skills.coordination} />
-                <Skill name="Deception" char="CUN" model={model.skills.deception} />
-                <Skill name="Discipline" char="WIL" model={model.skills.discipline} />
-                <Skill name="Leadership" char="PR" model={model.skills.leadership} />
-                <Skill name="Mechanics" char="INT" model={model.skills.mechanics} />
-                <Skill name="Medicine" char="INT" model={model.skills.medicine} />
-                <Skill name="Negotiation" char="PR" model={model.skills.negotiation} />
-                <Skill name="Perception" char="CUN" model={model.skills.perception} />
-                <Skill name="Piloting - Planetery" char="AG" model={model.skills.piloting_planetery} />
-                <Skill name="Piloting - Space" char="AG" model={model.skills.piloting_space} />
-                <Skill name="Resilience" char="BR" model={model.skills.resilience} />
-                <Skill name="Skullduggery" char="CUN" model={model.skills.skullduggery} />
-                <Skill name="Stealth" char="AG" model={model.skills.stealth} />
+                <Skill name="Astrogation" char="INT" model={model.values.astrogation} />
+                <Skill name="Athletics" char="BR" model={model.values.athletics} />
+                <Skill name="Charm" char="PR" model={model.values.charm} />
+                <Skill name="Coercion" char="WIL" model={model.values.coercion} />
+                <Skill name="Computers" char="INT" model={model.values.computers} />
+                <Skill name="Cool" char="PR" model={model.values.cool} />
+                <Skill name="Coordination" char="AG" model={model.values.coordination} />
+                <Skill name="Deception" char="CUN" model={model.values.deception} />
+                <Skill name="Discipline" char="WIL" model={model.values.discipline} />
+                <Skill name="Leadership" char="PR" model={model.values.leadership} />
+                <Skill name="Mechanics" char="INT" model={model.values.mechanics} />
+                <Skill name="Medicine" char="INT" model={model.values.medicine} />
+                <Skill name="Negotiation" char="PR" model={model.values.negotiation} />
+                <Skill name="Perception" char="CUN" model={model.values.perception} />
+                <Skill name="Piloting - Planetery" char="AG" model={model.values.piloting_planetery} />
+                <Skill name="Piloting - Space" char="AG" model={model.values.piloting_space} />
+                <Skill name="Resilience" char="BR" model={model.values.resilience} />
+                <Skill name="Skullduggery" char="CUN" model={model.values.skullduggery} />
+                <Skill name="Stealth" char="AG" model={model.values.stealth} />
               </tbody>
             </table>
           </div>
@@ -77,34 +76,34 @@ class SkillPage extends React.Component {
                   <th className="std-font gray skill-head-title-char">CHARS</th>
                   <th className="std-font gray skill-head-title-pool">POOL</th>
                 </tr>
-                <Skill name="Streetwise" char="CUN" model={model.skills.streetwise} />
-                <Skill name="Survival" char="CUN" model={model.skills.survival} />
-                <Skill name="Vigilance" char="WIL" model={model.skills.vigilance} />
+                <Skill name="Streetwise" char="CUN" model={model.values.streetwise} />
+                <Skill name="Survival" char="CUN" model={model.values.survival} />
+                <Skill name="Vigilance" char="WIL" model={model.values.vigilance} />
                 <tr>
                   <th className="skill-head-title-career" />
                   <th className="std-font gray skill-head-title-name">KNOWLEDGE SKILLS</th>
                   <th className="std-font gray skill-head-title-char">CHARS</th>
                   <th className="std-font gray skill-head-title-pool">POOL</th>
                 </tr>
-                <Skill name="Core Worlds" char="INT" model={model.skills.core_worlds} />
-                <Skill name="Education" char="INT" model={model.skills.education} />
-                <Skill name="Lore" char="INT" model={model.skills.lore} />
-                <Skill name="Outer Rim" char="INT" model={model.skills.outer_rim} />
-                <Skill name="Underworld" char="INT" model={model.skills.underworld} />
-                <Skill name="Warfare" char="INT" model={model.skills.warfare} />
-                <Skill name="Xenology" char="INT" model={model.skills.xenology} />
+                <Skill name="Core Worlds" char="INT" model={model.values.core_worlds} />
+                <Skill name="Education" char="INT" model={model.values.education} />
+                <Skill name="Lore" char="INT" model={model.values.lore} />
+                <Skill name="Outer Rim" char="INT" model={model.values.outer_rim} />
+                <Skill name="Underworld" char="INT" model={model.values.underworld} />
+                <Skill name="Warfare" char="INT" model={model.values.warfare} />
+                <Skill name="Xenology" char="INT" model={model.values.xenology} />
                 <tr>
                   <th className="skill-head-title-career" />
                   <th className="std-font gray skill-head-title-name">COMBAT SKILLS</th>
                   <th className="std-font gray skill-head-title-char">CHARS</th>
                   <th className="std-font gray skill-head-title-pool">POOL</th>
                 </tr>
-                <Skill name="Brawl" char="BR" model={model.skills.brawl} />
-                <Skill name="Gunnery" char="AG" model={model.skills.gunnery} />
-                <Skill name="Lightsaber" char="BR" model={model.skills.lightsaber} />
-                <Skill name="Melee" char="BR" model={model.skills.melee} />
-                <Skill name="Ranged - Heavy" char="AG" model={model.skills.ranged_heavy} />
-                <Skill name="Ranged - Light" char="AG" model={model.skills.ranged_light} />
+                <Skill name="Brawl" char="BR" model={model.values.brawl} />
+                <Skill name="Gunnery" char="AG" model={model.values.gunnery} />
+                <Skill name="Lightsaber" char="BR" model={model.values.lightsaber} />
+                <Skill name="Melee" char="BR" model={model.values.melee} />
+                <Skill name="Ranged - Heavy" char="AG" model={model.values.ranged_heavy} />
+                <Skill name="Ranged - Light" char="AG" model={model.values.ranged_light} />
               </tbody>
             </table>
           </div>
@@ -116,21 +115,25 @@ class SkillPage extends React.Component {
     )
   }
 
-  componentDidMount() {
-    fetch("/models/skill_model.json")
-      .then(respponse => respponse.json())
-      .then(json => this.setState({ skillModel: json }));
-  }
-
   render() {
 
-    return this.renderBody(this.state.skillModel) ||
-        <div className="spinner-position-box">
-          <div className="spinner-border spinner-size" role="status">
-            <span className="sr-only">Loading...</span>
-          </div>
-        </div>;
+    return this.renderBody(this.props.skills) ||
+      <div className="spinner-position-box">
+        <div className="spinner-border spinner-size" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>;
   }
 }
 
-export default withRouter(SkillPage);
+const mapStateToProps = state => {
+  return !state.skills.isFetching ?
+    {
+      skills: state.skills
+    } : {};
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+  {}
+)(SkillPage));

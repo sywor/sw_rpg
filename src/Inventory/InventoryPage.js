@@ -1,7 +1,6 @@
 import React from 'react';
-import {
-  withRouter
-} from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { connect } from 'react-redux'
 import { enrichItem } from '../Common/CommonMethods';
 
 import './InventoryPage.css';
@@ -84,7 +83,7 @@ class InventoryPage extends React.Component {
 
             return armors.map((armor) => {
               key_counter++;
-              if (armor.id == inventory.armor[inventory.armor.length - 1].id) {
+              if (armor.id === inventory.armor[inventory.armor.length - 1].id) {
                 return (
                   <div className="flex-box flex-column" key={key_counter}>
                     <div className="flex-box">
@@ -137,31 +136,29 @@ class InventoryPage extends React.Component {
   }
 
   async componentDidMount() {
-    let [inventory_model, weapon_models, armor_models] = await Promise.all([
-      fetch("/models/inventory_model.json"),
+    let [weapon_models, armor_models] = await Promise.all([
       fetch("/models/weapon_models.json"),
       fetch("/models/armor_models.json")
     ]);
 
-    let inventory = await inventory_model.json();
     let weapons = await weapon_models.json();
     let armors = await armor_models.json();
 
-    let enriched_weapons = enrichItem(weapons, inventory.weapons);
-    const enriched_armors = enrichItem(armors, inventory.armor);
-
-    this.setState({ inventory: inventory });
-    this.setState({ weapons: enriched_weapons });
-    this.setState({ armors: enriched_armors });
+    this.setState({ weapons: weapons });
+    this.setState({ armors: armors });
   }
 
   render() {
-    var inventory = this.state.inventory;
+    var inventory = this.props.inventory;
     var weapons = this.state.weapons;
     var armors = this.state.armors;
 
     if (inventory && weapons && armors) {
-      return this.renderBody(inventory, weapons, armors);
+
+      let enriched_weapons = enrichItem(weapons, inventory.weapons);
+      const enriched_armors = enrichItem(armors, inventory.armor);
+
+      return this.renderBody(inventory, enriched_weapons, enriched_armors);
     }
     else {
       return (
@@ -175,4 +172,14 @@ class InventoryPage extends React.Component {
   }
 }
 
-export default withRouter(InventoryPage);
+const mapStateToProps = state => {
+  return !state.inventory.isFetching ?
+    {
+      inventory: state.inventory
+    } : {};
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+  { }
+)(InventoryPage));

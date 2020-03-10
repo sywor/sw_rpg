@@ -7,7 +7,7 @@
     "willpower": 2,
     "presence": 3
   },
-  "skills": {
+  "values": {
     "astrogation": {
       "career": false,
       "pool": [
