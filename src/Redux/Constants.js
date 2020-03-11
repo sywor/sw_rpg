@@ -11,12 +11,14 @@ export const INVALIDATE = "INVALIDATE";
 export const DESCRIPTION = "DESCRIPTION";
 export const NAME = "NAME";
 export const WEAPONS = "WEAPONS";
+export const ARMOR = "ARMOR";
 export const TOGGLE = "TOGGLE";
 
 export const INVENTORY_INVALIDATE = [INVENTORY, INVALIDATE].join(".");
 export const INVENTORY_FETCH = [INVENTORY, FETCH].join(".");
 export const INVENTORY_RECEIVE = [INVENTORY, RECEIVE].join(".");
 export const INVENTORY_TOGGLE_WEAPON = [INVENTORY, WEAPONS, TOGGLE].join(".");
+export const INVENTORY_TOGGLE_ARMOR = [INVENTORY, ARMOR, TOGGLE].join(".");
 
 export const SKILLS_INVALIDATE = [SKILLS, INVALIDATE].join(".");
 export const SKILLS_FETCH = [SKILLS, FETCH].join(".");

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
 import { enrichItem } from '../Common/CommonMethods';
-import { toggleWeapon } from '../Redux/Actions/InventoryActions';
+import { toggleWeapon, toggleArmor } from '../Redux/Actions/InventoryActions';
 import baseData from '../Redux/baseData';
 
 import './InventoryPage.css';
@@ -78,13 +78,7 @@ class InventoryPage extends React.Component {
                   <div className="flex-box flex-column" key={key_counter}>
                     <div className="flex-box">
                       <Armor armor={armor} />
-                      <div className="flex-box" onClick={() => {
-                        this.setState(oldState => {
-                          let tmp = oldState.armors.find(a => a.id === armor.id);
-                          tmp.equiped = !tmp.equiped;
-                          return oldState;
-                        });
-                      }}>
+                      <div className="flex-box" onClick={() => { this.props.toggleArmorClick(armor.id) }}>
                         {armor.equiped
                           ? <i className="fas fa-sign-out-alt fa-2x equip-icon equpied" />
                           : <i className="fas fa-sign-in-alt fa-2x equip-icon unequpied" />
@@ -99,13 +93,7 @@ class InventoryPage extends React.Component {
                   <div className="flex-box flex-column" key={key_counter}>
                     <div className="flex-box">
                       <Armor armor={armor} />
-                      <div className="flex-box" onClick={() => {
-                        this.setState(oldState => {
-                          let tmp = oldState.armors.find(a => a.id === armor.id);
-                          tmp.equiped = !tmp.equiped;
-                          return oldState;
-                        });
-                      }}>
+                      <div className="flex-box" onClick={() => { this.props.toggleArmorClick(armor.id) }}>
                         {armor.equiped
                           ? <i className="fas fa-sign-out-alt fa-2x equip-icon equpied" />
                           : <i className="fas fa-sign-in-alt fa-2x equip-icon unequpied" />
@@ -151,10 +139,11 @@ const mapStateToProps = state => {
     const enriched_armors = enrichItem(baseData.armor, state.inventory.armor);
 
     return {
-      inventory: { 
-        ...state.inventory, 
-        weapons: enriched_weapons, 
-        armor: enriched_armors }
+      inventory: {
+        ...state.inventory,
+        weapons: enriched_weapons,
+        armor: enriched_armors
+      }
     };
   }
   return {};
@@ -162,5 +151,8 @@ const mapStateToProps = state => {
 
 export default withRouter(connect(
   mapStateToProps,
-  { toggleWeaponClick: toggleWeapon }
+  {
+    toggleWeaponClick: toggleWeapon,
+    toggleArmorClick: toggleArmor
+  }
 )(InventoryPage));

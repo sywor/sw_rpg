@@ -4,7 +4,8 @@ import {
     INVENTORY_INVALIDATE,
     INVENTORY_FETCH,
     INVENTORY_RECEIVE,
-    INVENTORY_TOGGLE_WEAPON
+    INVENTORY_TOGGLE_WEAPON,
+    INVENTORY_TOGGLE_ARMOR
 } from '../Constants';
 
 export function invalidateEntireInventory() {
@@ -23,11 +24,20 @@ export function fetchEntireInventory() {
     }
 }
 
-export function toggleWeapon(weapon_id) {
+export function toggleWeapon(weaponId) {
     return {
         type: INVENTORY_TOGGLE_WEAPON,
         payload: {
-            weaponId: weapon_id
+            id: weaponId
+        }
+    }
+}
+
+export function toggleArmor(armorId) {
+    return {
+        type: INVENTORY_TOGGLE_ARMOR,
+        payload: {
+            id: armorId
         }
     }
 }
