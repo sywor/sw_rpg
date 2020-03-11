@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
 import { renderRedPoolIcon, enrichItem } from '../Common/CommonMethods';
+import baseData from '../Redux/baseData';
 
 import './CombatPage.css';
 
@@ -16,7 +17,7 @@ class CombatPage extends React.Component {
     this.state = {};
   }
 
-  renderBody(inventory, combat, weapons, armors) {
+  renderBody(inventory, combat) {
 
     let equipedWeapons = inventory.weapons.filter(weapon => weapon.equiped);
     let equipedArmor = inventory.armor.filter(armor => armor.equiped);
@@ -27,9 +28,7 @@ class CombatPage extends React.Component {
         <Divider title="WEAPONS" />
         {
           (() => {
-            const enriched = enrichItem(weapons, equipedWeapons);
-
-            return enriched.map((weapon) => {
+            return equipedWeapons.map((weapon) => {
               key_counter++;
               if (weapon.id === equipedWeapons[equipedWeapons.length - 1].id) {
                 return (<Weapon weapon={weapon} key={key_counter} />);
@@ -49,9 +48,7 @@ class CombatPage extends React.Component {
         </div>
         {
           (() => {
-            const enriched = enrichItem(armors, equipedArmor);
-
-            return enriched.map((armor) => {
+            return equipedArmor.map((armor) => {
               key_counter++;
               if (armor.id === equipedArmor[equipedArmor.length - 1].id) {
                 return (<Armor armor={armor} key={key_counter} />);
@@ -140,28 +137,13 @@ class CombatPage extends React.Component {
     );
   }
 
-  async componentDidMount() {
-    let [weapon_models, armor_models] = await Promise.all([
-      fetch("/models/weapon_models.json"),
-      fetch("/models/armor_models.json")
-    ]);
-
-    let weapons = await weapon_models.json();
-    let armors = await armor_models.json();
-
-    this.setState({ base_weapons: weapons });
-    this.setState({ base_armors: armors });
-  }
-
   render() {
 
     var inventory = this.props.inventory;
     var combat = this.props.combat;
-    var weapons = this.state.base_weapons;
-    var armors = this.state.base_armors;
 
-    if (inventory && combat && weapons && armors) {
-      return this.renderBody(inventory, combat, weapons, armors);
+    if (inventory && combat) {
+      return this.renderBody(inventory, combat);
     }
     else {
       return (
@@ -176,11 +158,22 @@ class CombatPage extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return !state.combat.isFetching ?
-    {
+
+  if (!state.combat.isFetching && !state.inventory.isFetching) {
+
+    const enriched_weapons = enrichItem(baseData.weapons, state.inventory.weapons);
+    const enriched_armors = enrichItem(baseData.armor, state.inventory.armor);
+
+    return {
       combat: state.combat,
-      inventory: state.inventory
-    } : {};
+      inventory: {
+        ...state.inventory,
+        weapons: enriched_weapons,
+        armor: enriched_armors
+      }
+    };
+  }
+  return {};
 }
 
 export default withRouter(connect(

@@ -12,32 +12,37 @@ function renderRedPoolIcon(value, key) {
     }
 }
 
-function enrichItem(base, items) {
+function enrichItems(base, items) {
 
     return items.map((item) => {
-        const base_data = Object.assign({}, 
-            { 
-                id: item.id, 
-                type_key: item.type_key, 
-                equiped: item.equiped
-            }, 
-            base[item.type_key]);
 
-        for (var key of Object.keys(item.modification)) {
-            if (base_data.hasOwnProperty(key)) {
-                if (typeof base_data[key] === 'string') {
-                    base_data[key] += " " + item.modification[key];
-                }
-                else {
-                    base_data[key] += item.modification[key];
+        if ('modification' in item) {
+            const base_data = Object.assign({},
+                {
+                    id: item.id,
+                    type_key: item.type_key,
+                    equiped: item.equiped
+                },
+                base[item.type_key]);
+
+            for (var key of Object.keys(item.modification)) {
+                if (base_data.hasOwnProperty(key)) {
+                    if (typeof base_data[key] === 'string') {
+                        base_data[key] += " " + item.modification[key];
+                    }
+                    else {
+                        base_data[key] += item.modification[key];
+                    }
                 }
             }
+
+            base_data.condition = [].concat(item.condition);
+
+            return base_data;
         }
 
-        base_data.condition = [].concat(item.condition);
-
-        return base_data;
+        return item;
     });
 }
 
-export { renderRedPoolIcon, enrichItem }
+export { renderRedPoolIcon, enrichItems as enrichItem }

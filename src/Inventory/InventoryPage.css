@@ -1,16 +1,22 @@
+:root{
+    --amber-arrow: 
+}
+
 .margin-top {
     margin-top: 2rem;
 }
 
 .equip-icon {
     margin-right: 1rem;
+}
+
+.equip-icon.unequpied {
+    color: #FF8B1F;    
     transform: rotate(90deg);
 }
 
-.equip-icon.green {
-    color: green;
-}
-
-.equip-icon.red {
-    color: red;
+.equip-icon.equpied {
+    color: #008EB3;
+    transform: rotate(-90deg);
+    transform-origin: 100% 30%;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
-import { SetCharacterName } from '../Redux/Actions';
 
 import './CharacterPage.css';
 
@@ -24,9 +23,9 @@ class CharacterPage extends React.Component {
         <div className="flex-box content-width-50 justify-content-center">
           <img src={model.description.avatar} alt="avatar" />
         </div>
-        <div className="flex-box content-width-50 flex-column" onClick={() => this.props.clicked("Test")}>
+        <div className="flex-box content-width-50 flex-column">
           <Divider title="DESCRIPTION" />
-          <Descriptor title={"NAME"} content={model.description.name}/>
+          <Descriptor title={"NAME"} content={model.description.name} />
           <Descriptor title={"SPECIES"} content={model.description.species} />
           <Descriptor title={"CAREER"} content={model.description.career} />
           <div className="flex-box">
@@ -93,5 +92,5 @@ const mapStateToProps = state => {
 
 export default withRouter(connect(
   mapStateToProps,
-  { clicked: SetCharacterName }
+  {}
 )(CharacterPage));
