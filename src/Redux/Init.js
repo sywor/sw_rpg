@@ -1,15 +1,12 @@
 const init = {
+    isFetching: false,
+    didInvalidate: true,
+    lastUpdated: 0,
     inventory: {
-        isFetching: false,
-        didInvalidate: true,
-        lastUpdated: 0,
         weapons: [],
         armor: []
     },
     skills: {
-        isFetching: false,
-        didInvalidate: true,
-        lastUpdated: 0,
         characteristics: {
             brawn: 0,
             agility: 0,
@@ -372,9 +369,6 @@ const init = {
         }
     },
     combat: {
-        isFetching: false,
-        didInvalidate: true,
-        lastUpdated: 0,
         combat_stats: {
             soak: 0,
             wounds: {
@@ -393,9 +387,6 @@ const init = {
         critical_injuries: []
     },
     character: {
-        isFetching: false,
-        didInvalidate: true,
-        lastUpdated: 0,
         description: {
             avatar: undefined,
             name: undefined,

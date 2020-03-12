@@ -14,18 +14,8 @@ export const WEAPONS = "WEAPONS";
 export const ARMOR = "ARMOR";
 export const TOGGLE = "TOGGLE";
 
-export const INVENTORY_INVALIDATE = [INVENTORY, INVALIDATE].join(".");
-export const INVENTORY_FETCH = [INVENTORY, FETCH].join(".");
-export const INVENTORY_RECEIVE = [INVENTORY, RECEIVE].join(".");
 export const INVENTORY_TOGGLE_WEAPON = [INVENTORY, WEAPONS, TOGGLE].join(".");
 export const INVENTORY_TOGGLE_ARMOR = [INVENTORY, ARMOR, TOGGLE].join(".");
 
-export const SKILLS_INVALIDATE = [SKILLS, INVALIDATE].join(".");
-export const SKILLS_FETCH = [SKILLS, FETCH].join(".");
-export const SKILLS_RECEIVE = [SKILLS, RECEIVE].join(".");
-export const COMBAT_INVALIDATE = [COMBAT, INVALIDATE].join(".");
-export const COMBAT_FETCH = [COMBAT, FETCH].join(".");
-export const COMBAT_RECEIVE = [COMBAT, RECEIVE].join(".");
-export const CHARACTER_INVALIDATE = [CHARACTER, INVALIDATE].join(".");
 export const CHARACTER_FETCH = [CHARACTER, FETCH].join(".");
 export const CHARACTER_RECEIVE = [CHARACTER, RECEIVE].join(".");

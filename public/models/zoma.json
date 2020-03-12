@@ -1,0 +1,495 @@
+{
+    "character": {
+        "description": {
+            "avatar": "/img/zoma.png",
+            "name": "Zoma",
+            "species": "Chiss",
+            "career": "Doctor",
+            "gender": "Male",
+            "height": "1.85m",
+            "hair": "Black",
+            "age": "35",
+            "build": "Avrage",
+            "eyes": "Red",
+            "motivation": "Wonderlust"
+        },
+        "obligations": [
+            {
+                "description": "Oath",
+                "size": 8
+            },
+            {
+                "description": "Guilt",
+                "size": 5
+            }
+        ],
+        "morality": {
+            "strength": "N/A",
+            "weakness": "N/A",
+            "conflict": "N/A",
+            "value": 53
+        },
+        "experience": {
+            "total": 320,
+            "available": 140
+        },
+        "background": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "skills": {
+        "characteristics": {
+            "brawn": 2,
+            "agility": 3,
+            "intelect": 4,
+            "cunning": 3,
+            "willpower": 2,
+            "presence": 3
+        },
+        "values": {
+            "astrogation": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "athletics": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "charm": {
+                "career": true,
+                "pool": [
+                    1,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "coercion": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "computers": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "cool": {
+                "career": true,
+                "pool": [
+                    1,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "coordination": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "deception": {
+                "career": true,
+                "pool": [
+                    1,
+                    1,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "discipline": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "leadership": {
+                "career": true,
+                "pool": [
+                    1,
+                    1,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "mechanics": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "medicine": {
+                "career": true,
+                "pool": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    3
+                ]
+            },
+            "negotiation": {
+                "career": true,
+                "pool": [
+                    1,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "perception": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "piloting_planetery": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "piloting_space": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "resilience": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "skullduggery": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "stealth": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "streetwise": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "survival": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "vigilance": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "core_worlds": {
+                "career": true,
+                "pool": [
+                    1,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "education": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "lore": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "outer_rim": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "underworld": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "warfare": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "xenology": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    0
+                ]
+            },
+            "brawl": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "gunnery": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    2,
+                    0,
+                    0
+                ]
+            },
+            "lightsaber": {
+                "career": false,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "melee": {
+                "career": true,
+                "pool": [
+                    2,
+                    2,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "ranged_heavy": {
+                "career": true,
+                "pool": [
+                    1,
+                    1,
+                    1,
+                    0,
+                    0
+                ]
+            },
+            "ranged_light": {
+                "career": true,
+                "pool": [
+                    1,
+                    1,
+                    2,
+                    0,
+                    0
+                ]
+            }
+        }
+    },
+    "combat": {
+        "combat_stats": {
+            "soak": 3,
+            "wounds": {
+                "threshold": 16,
+                "current": 2
+            },
+            "defense": {
+                "melee": 0,
+                "range": 0
+            },
+            "strain": {
+                "threshold": 17,
+                "current": 4
+            }
+        },
+        "critical_injuries": [
+            {
+                "servierity": [
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "description": "some description"
+            }
+        ]
+    },
+    "inventory": {
+        "weapons": [
+            {
+                "id": "41f11c7a-8793-4c7f-8b4a-8910758f4732",
+                "type_key": "blaster_rifle",
+                "condition": [
+                    1,
+                    1,
+                    0
+                ],
+                "modification": {},
+                "equiped": true
+            },
+            {
+                "id": "eb1e2e42-5f2f-4a4b-a6ba-5e6d772c4c9b",
+                "type_key": "solid_projectile_pistol",
+                "condition": [
+                    1,
+                    0,
+                    0
+                ],
+                "modification": {
+                    "hard_points": 1
+                },
+                "equiped": true
+            },
+            {
+                "id": "4d38b470-0246-48da-b600-ace3550e1862",
+                "type_key": "blaster_rifle",
+                "condition": [
+                    0,
+                    0,
+                    0
+                ],
+                "modification": {},
+                "equiped": false
+            }
+        ],
+        "armor": [
+            {
+                "id": "d68ceeff-91b0-4dc6-a178-e47f6b745168",
+                "type_key": "padded_light_armor",
+                "condition": [
+                    1,
+                    1,
+                    1
+                ],
+                "modification": {
+                    "special": "Sealable"
+                },
+                "equiped": true
+            },
+            {
+                "id": "e741d9e9-ab82-41af-8eae-8b541f8a0588",
+                "type_key": "padded_light_armor",
+                "condition": [
+                    0,
+                    0,
+                    0
+                ],
+                "modification": {
+                    "special": "Sealable"
+                },
+                "equiped": false
+            }
+        ]
+    }
+}

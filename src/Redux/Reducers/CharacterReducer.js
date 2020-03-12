@@ -1,10 +1,7 @@
-import { fetch, invalidate } from './ReducerCommon'
+import { fetch } from './ReducerCommon'
 import {
     FETCH,
-    RECEIVE,
-    INVALIDATE,
-    DESCRIPTION,
-    NAME
+    RECEIVE
 } from '../Constants';
 
 function character(state = {}, path, payload) {
@@ -16,31 +13,14 @@ function character(state = {}, path, payload) {
                 isFetching: false,
                 didInvalidate: false,
                 lastUpdated: payload.receivedAt,
-                description: payload.json.description,
-                obligations: payload.json.obligations,
-                morality: payload.json.morality,
-                experience: payload.json.experience,
-                background: payload.json.background,
+                character: payload.json.character,
+                skills: payload.json.skills,
+                combat: payload.json.combat,
+                inventory: payload.json.inventory,
             });
-        case INVALIDATE:
-            return invalidate(state);
-        case DESCRIPTION:
-            return Object.assign({}, state, {
-                description: characterDescription(state.description, path, payload)
-            });
+
         default:
             return state
-    }
-}
-
-function characterDescription(state = {}, path, payload) {
-    switch (path.shift()) {
-        case NAME:
-            return Object.assign({}, state, {
-                name: payload.name
-            })
-        default:
-            return state;
     }
 }
 

@@ -3,10 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import rootReducer from './RootReducer';
 import Init from './Init';
-import { fetchEntireInventory } from './Actions/InventoryActions';
-import { fetchAllSkills } from './Actions/SkillActions';
-import { fetchAllCombat } from './Actions/CombatActions';
-import { fetchEntireCharacter } from './Actions/CharacterActions';
+import { fetchCharacterById } from './Actions/GlobalActions';
 
 const loggerMiddleware = createLogger()
 
@@ -18,10 +15,7 @@ export default function configureStore() {
     applyMiddleware(thunkMiddleware, loggerMiddleware)
   )
 
-  store.dispatch(fetchEntireInventory());
-  store.dispatch(fetchAllSkills());
-  store.dispatch(fetchAllCombat());
-  store.dispatch(fetchEntireCharacter());
+  store.dispatch(fetchCharacterById());
 
   return store;
 }
