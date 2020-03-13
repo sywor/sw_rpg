@@ -19,7 +19,7 @@ class CombatPage extends React.Component {
 
   renderBody(inventory, combat) {
 
-    let equipedWeapons = inventory.weapons.filter(weapon => weapon.equiped);
+    let equipedWeapon = inventory.weapon.filter(weapon => weapon.equiped);
     let equipedArmor = inventory.armor.filter(armor => armor.equiped);
     let key_counter = 0;
 
@@ -28,9 +28,9 @@ class CombatPage extends React.Component {
         <Divider title="WEAPONS" />
         {
           (() => {
-            return equipedWeapons.map((weapon) => {
+            return equipedWeapon.map((weapon) => {
               key_counter++;
-              if (weapon.id === equipedWeapons[equipedWeapons.length - 1].id) {
+              if (weapon.id === equipedWeapon[equipedWeapon.length - 1].id) {
                 return (<Weapon weapon={weapon} key={key_counter} />);
               }
               else {

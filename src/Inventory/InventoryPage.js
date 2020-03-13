@@ -28,9 +28,9 @@ class InventoryPage extends React.Component {
           (() => {
             key_counter++;
 
-            return inventory.weapons.map((weapon) => {
+            return inventory.weapon.map((weapon) => {
               key_counter++;
-              if (weapon.id === inventory.weapons[inventory.weapons.length - 1].id) {
+              if (weapon.id === inventory.weapons[inventory.weapon.length - 1].id) {
                 return (
                   <div className="flex-box flex-column" key={key_counter}>
                     <div className="flex-box">

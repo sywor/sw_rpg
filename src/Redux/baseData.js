@@ -9,7 +9,7 @@ const baseData = {
             "special": ""
         }
     },
-    weapons: {
+    weapon: {
         "solid_projectile_pistol": {
             "name": "Solid Projectile Pistol",
             "skill": "Ranged light",

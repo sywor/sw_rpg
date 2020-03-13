@@ -3,7 +3,7 @@ const init = {
     didInvalidate: true,
     lastUpdated: 0,
     inventory: {
-        weapons: [],
+        weapon: [],
         armor: []
     },
     skills: {
